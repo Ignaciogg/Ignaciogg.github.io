@@ -1,0 +1,62 @@
+.titulo{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+nav, nav ul, nav ul li{
+    display: flex;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    background-color:rgb(161, 204, 247);
+}
+
+.bandera{
+    flex:1;
+}
+
+.menu{
+    flex:4;
+    margin-left: 55px;
+}
+
+.menu li{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+nav ul li img{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+li a{
+    text-decoration: none;
+}
+
+body{
+    border: 5px solid rgb(161, 204, 247);
+}
+
+.flexHeader{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    display:flex;
+    width: 60%;
+    margin: auto;
+}
+
+.flexHeader img{
+    max-width: 200px;
+    flex: 1;
+    margin-right: 35px;
+}
+
+.flexHeader p{
+    flex: 4;
+}
