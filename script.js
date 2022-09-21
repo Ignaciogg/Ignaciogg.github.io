@@ -5,7 +5,6 @@ function seleccionar(link) {
     opciones[1].className = "";
     opciones[2].className = "";
     opciones[3].className = "";
-    opciones[4].className = "";
     link.className = "seleccionado";
 }
 
