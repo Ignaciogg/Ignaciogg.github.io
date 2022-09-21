@@ -10,7 +10,7 @@ html {
     scroll-behavior: smooth;
 }
 /* *********************/
-/* seccion I N I C I O */
+/* HEADER */
 /* *********************/
 
 #inicio {
@@ -134,7 +134,7 @@ html {
     display: none;
 }
 /* *********************/
-/* seccion S O B R E  M I */
+/* ABOUT ME */
 /* *********************/
 
 #sobremi {
@@ -212,7 +212,7 @@ html {
     color: #fff;
 }
 /* *********************/
-/* seccion S E R V I C I O S */
+/* SERVICES */
 /* *********************/
 
 #servicios {
@@ -285,7 +285,7 @@ html {
     line-height: 22px;
 }
 /* *********************/
-/* seccion S K I L L S */
+/* SKILLS */
 /* *********************/
 
 .contenedor-skills {
@@ -404,7 +404,7 @@ html {
     }
 }
 /* *********************/
-/* seccion P O R T F O L I O */
+/* PORTFOLIO */
 /* *********************/
 
 #portfolio {
@@ -438,8 +438,8 @@ html {
 }
 
 #portfolio .fila .proyecto img {
-    width: 100%;
-    height: 100%;
+    width: 330px;
+    height: 330px;
     ;
     filter: grayscale(1);
     object-fit: cover;
@@ -468,7 +468,7 @@ html {
 }
 
 /* *********************/
-/* seccion F O O T E R */
+/* FOOTER */
 /* *********************/
 
 footer {
@@ -487,7 +487,7 @@ footer a {
 }
 
 /* *********************/
-/* seccion R E S P O N S I V E */
+/* RESPONSIVE */
 /* *********************/
 
 @media screen and (max-width: 800px) {
@@ -520,7 +520,7 @@ footer a {
         font-size: 40px;
     }
 
-    /* seccion SOBRE MI */
+    /* ABOUT ME */
     #sobremi {
         padding: 50px 0;
         display: block;
@@ -540,7 +540,7 @@ footer a {
         text-align: center;
     }
 
-    /* seccion MIS SERVICIOS */
+    /* SERVICES */
     #servicios {
         padding: 50px 15px;
     }
@@ -551,12 +551,12 @@ footer a {
         margin: 10px auto;
     }
 
-    /* seccion HABLIDADES MI */
+    /* SKILLS */
     .contenedor-skills {
         padding: 50px 20px;
     }
 
-    /* seccion PORTFOLIO */
+    /* PORTFOLIO */
     #portfolio {
         padding: 50px 0;
     }
@@ -565,18 +565,5 @@ footer a {
     }
     #portfolio .fila .proyecto {
         margin: 10px auto;
-    }
-
-    /* seccion CONTACTO */
-    #contacto {
-        padding: 50px 15px;
-    }
-    #contacto .contenedor-form .mitad {
-        margin-bottom: 15px;
-        display: block;
-    }
-    #contacto .contenedor-form .mitad input {
-        width: 100%;
-        margin-bottom: 15px;
     }
 }
