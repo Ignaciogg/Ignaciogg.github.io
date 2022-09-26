@@ -37,7 +37,16 @@ html {
     padding: 10px 20px;
 }
 
+#inicio .contenido header .contenido-header div a img{
+    max-width: 45px;
+    max-height: 37px;
+    margin-left: -90%;
+    margin-right: 90%;
+    padding-right: 5%;
+}
+
 #inicio .contenido header .contenido-header h1 {
+    margin-left: -35%;
     text-align: center;
     color: #7b0086;
 }
@@ -51,7 +60,7 @@ html {
 #inicio .contenido header .contenido-header nav ul li a {
     text-decoration: none;
     color: #fff;
-    margin: 0 12px;
+    margin-right: 25px;
     font-weight: 400;
     transition: .5s;
 }
@@ -101,8 +110,8 @@ html {
 }
 
 #inicio .contenido .presentacion h2 span {
-    font-size: 25px;
-    color: #7b0086;
+    font-size: 27px;
+    color: #974f9e;
 }
 
 #inicio .contenido .presentacion .descripcion {
@@ -440,7 +449,6 @@ html {
 #portfolio .fila .proyecto img {
     width: 330px;
     height: 330px;
-    ;
     filter: grayscale(1);
     object-fit: cover;
     transition: .5s;
