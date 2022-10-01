@@ -34,3 +34,20 @@ function efectoHabilidades() {
     }
 
 }
+
+function changeLanguage(lang) {
+    location.hash = lang;
+    location.reload();
+  }
+    
+  // Check if a hash value exists in the URL
+  if (window.location.hash) {
+    
+    if (window.location.hash == "#es") {
+      siteContent.textContent = language.es;
+    } else if (window.location.hash == "#fr") {
+      siteContent.textContent = language.fr;
+    } else if (window.location.hash == "#en") {
+      siteContent.textContent = language.en;
+    }
+  }

@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="index.css">
-    <title>IGG Programmer & Web Designer</title>
+    <title lang="es">IGG Programador & Diseñador Web</title>
+    <title lang="en">IGG Programmer & Web Designer</title>
+    <title lang="fr">IGG Programmeur & Webdesigner</title>
+
 </head>
 
 <body>
@@ -19,9 +22,9 @@
             <header>
                 <div class="contenido-header">
                     <div class="banderas">
-                        <a><img src="img/spanish.png"></a>
-                        <a><img src="img/english.png"></a>
-                        <a><img src="img/french.png"></a>
+                        <a><img src="img/spanish.png" onclick="changeLanguage('es')"></a>
+                        <a><img src="img/english.png" onclick="changeLanguage('en')"></a>
+                        <a><img src="img/french.png" onclick="changeLanguage('fr')"></a>
                     </div>
                     <h1>/IGG/</h1>
                     <nav id="nav" class="">
@@ -42,7 +45,7 @@
                 </div>
             </header>
             <div class="presentacion">
-                <p class="bienvenida">Welcome</p>
+                <p class="bienvenida" lang="en">Welcome</p>
                 <h2>My name is <span>Ignacio Gil Garzon</span>, and I'm a Programmer and Web Dev</h2>
                 <p class="descripcion">Currently looking for internships starting September 2023</p>
                 <a href="#portfolio">To Portfolio</a>
