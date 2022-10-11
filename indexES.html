@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="img/igg.PNG">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css">
+    <title>IGG Programador & Diseñador Web</title>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <div class="banderas">
+                        <a><img src="img/spanish.png" onclick="changeLanguage('es')"></a>
+                        <a><img src="img/english.png" onclick="changeLanguage('en')"></a>
+                        <a><img src="img/french.png" onclick="changeLanguage('fr')"></a>
+                    </div>
+                    <h1>/IGG/</h1>
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MÍ</a></li>
+                            <li><a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a></li>
+                            <li><a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a></li>
+                        </ul>
+                    </nav>
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="redes">
+                        <a href="mailto: nachogilgarzon@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://github.com/Ignaciogg"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ignacio-gil-garz%C3%B3n-93b321222"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </header>
+            <div class="presentacion">
+                <p class="bienvenida" lang="en">Bienvenidos</p>
+                <h2>Soy <span>Ignacio Gil Garzon</span>, Programador y Diseñador web.</h2>
+                <p class="descripcion">Buscando actualmente prácticas de empresa para septiembre 2023</p>
+                <a href="#portfolio">Al Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About me -->
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            <img src="img/fotoperfil.jpg" alt="">
+        </div>
+        <div class="sobremi">
+            <p class="titulo-seccion">Sobre mí</p>
+            <h2>Buenas, soy <span>Ignacio Gil</span> </h2>
+            <h3>Programador y Diseñador web</h3>
+            <p>Mi nombre es Ignacio y soy un programador de 21 años de Madrid, España desde 2017, cuando ensamblé mi primer PC.</p>
+            <p>Hoy en día estoy terminando la carrera de Ingeniería Informática en la Universidad Europea de Madrid.</p>
+            <p>Otros cursos que he completado son el Oxford Summer Courses de java y el Google Growth online course.</p>
+            <a href="#">Descargar Currículum</a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="servicios">
+        <h3 class="titulo-seccion">SERVICIOS</h3>
+        <div class="fila">
+            <div class="servicio">
+                <span class="icono"> <i class="fa-solid fa-code"></i></span>
+                <h4>Diseño web</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>HTML, CSS y JS</li>
+                </ul>
+                <p>Llevo 2 años dando servicio web y de aplicaciones móviles.</p>
+            </div>
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-file-code"></i></span>
+                <h4>Programación en Java y JavaFX</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Java</li>
+                </ul>
+                <p>He trabajado en diferentes variantes de java, los proyectos más interesantes están en el Portfolio.</p>
+            </div>
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-microchip"></i></span>
+                <h4>Algoritmos de IA y ML</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Bayes, K-nearest</li>
+                </ul>
+                <p>He trabajado con varios algoritmos de Inteligencia Artificial, los proyectos más interesantes están en el Portfolio.</p>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-database"></i></span>
+                <h4>Bases de Datos</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>SQL, Firebase DB</li>
+                </ul>
+                <p>Creacion y administracion de diferentes bases de datos para múltiples proyectos.</p>
+            </div>
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-chalkboard-user"></i></i></span>
+                <h4>Profesor</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Java & Python</li>
+                </ul>
+                <p>Llevo dos años dando enseñanza de programación desde cero hasta nivel intermedio.</p>
+            </div>
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-person-circle-question"></i></span>
+                <h4>Consultor externo</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Consejo general o específico</li>
+                </ul>
+                <p>Puedo aportar consejo en áreas de desarrollo web, inteligencia artificial y programación en general.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <div class="contenedor-skills" id="skills">
+        <h3>HABILIDADES</h3>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Java & JavaFX</p>
+                <span class="porcentaje">85%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="java"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>IA</p>
+                <span class="porcentaje">80%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="ai"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Python</p>
+                <span class="porcentaje">70%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="py"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Bases de Datos</p>
+                <span class="porcentaje">70%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="db"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>HTML & CSS</p>
+                <span class="porcentaje">60%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="html"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <h3 class="titulo-seccion">Mis Proyectos</h3>
+        <div class="fila">
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <a href="https://github.com/Ignaciogg/MediTech"><img src="img/logo Meditech.png" alt=""></a>
+                <div class="info">
+                    <h4>Edición de texto avanzada con Java</h4>
+                    <p>Meditech</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <a href="https://github.com/Ignaciogg/Go2TheTop"><img src="img/logoGO2.jpeg" alt=""></a>
+                <div class="info">
+                    <h4>Interfaz JavaFX conectada a Arduino</h4>
+                    <p>Go2TheTop</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <a href="https://github.com/Ignaciogg/IA-P2-ML-Pokemon"><img src="img/ml.jpg" alt=""></a>
+                <div class="info">
+                    <h4>Algoritmos de Machine Learning aplicados a Pokémon</h4>
+                    <p>IA PokemonI</p>
+                </div>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <a href="https://github.com/Ignaciogg/POO-RatonyGato"><img src="img/ratonygato.jpg" alt=""></a>
+                <div class="info">
+                    <h4>Programación con Java Swing</h4>
+                    <p>Ratón y gato</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <a href="https://github.com/Ignaciogg/Covid-QR-Check"><img src="img/qr.png" alt=""></a>
+                <div class="info">
+                    <h4>pasaporte Covid QR check utilizando Python, NodeJS y Firebase</h4>
+                    <p>QR-Check</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <a href="https://github.com/Ignaciogg/Practicas-TPA"><img src="img/quick.png" alt=""></a>
+                <div class="info">
+                    <h4>Algoritmos de búsqueda en Java: Quicksort, Mergesort y Búsqueda Binaria</h4>
+                    <p>Algoritmos de Búsqueda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Todos los derechos reservados - 2022</p>
+        <div class="redes">
+            <a href="mailto: nachogilgarzon@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/Ignaciogg"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ignacio-gil-garz%C3%B3n-93b321222"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

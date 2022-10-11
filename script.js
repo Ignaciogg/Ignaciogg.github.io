@@ -44,10 +44,10 @@ function changeLanguage(lang) {
   if (window.location.hash) {
     
     if (window.location.hash == "#es") {
-      siteContent.textContent = language.es;
+      location.href="indexES.html";
     } else if (window.location.hash == "#fr") {
-      siteContent.textContent = language.fr;
+      location.href="indexFR.html";
     } else if (window.location.hash == "#en") {
-      siteContent.textContent = language.en;
+      location.href="index.html";
     }
   }
