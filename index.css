@@ -28,8 +28,8 @@ html {
     top: 0;
 }
 
-#inicio .contenido header .contenido-header {
-    max-width: 1100px;
+#inicio .contenido header {
+    max-width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -37,27 +37,25 @@ html {
     padding: 10px 20px;
 }
 
-#inicio .contenido header .contenido-header div a img{
+#inicio .contenido header div a img{
     max-width: 45px;
     max-height: 37px;
-    margin-left: -90%;
-    margin-right: 90%;
     padding-right: 5%;
 }
 
-#inicio .contenido header .contenido-header h1 {
-    margin-left: -35%;
+#inicio .contenido header h1 {
+    margin: -19%;
     text-align: center;
     color: #7b0086;
 }
 
-#inicio .contenido header .contenido-header nav ul {
+#inicio .contenido header nav ul {
     list-style: none;
     display: flex;
     align-items: center;
 }
 
-#inicio .contenido header .contenido-header nav ul li a {
+#inicio .contenido header nav ul li a {
     text-decoration: none;
     color: #fff;
     margin-right: 25px;
@@ -65,11 +63,11 @@ html {
     transition: .5s;
 }
 
-#inicio .contenido header .contenido-header nav ul li a:hover {
+#inicio .contenido header nav ul li a:hover {
     color: #7b0086;
 }
 
-#inicio .contenido header .contenido-header .redes a {
+#inicio .contenido header .redes a {
     text-decoration: none;
     color: #fff;
     display: inline-block;
@@ -77,11 +75,11 @@ html {
     transition: .5s;
 }
 
-#inicio .contenido header .contenido-header .redes a:hover {
+#inicio .contenido header .redes a:hover {
     color: #7b0086;
 }
 
-#inicio .contenido header .contenido-header .seleccionado {
+#inicio .contenido header .seleccionado {
     color: #7b0086;
 }
 
@@ -492,6 +490,11 @@ footer a {
     display: inline-block;
     margin: 5px;
     font-size: 26px;
+    transition: .5s;
+}
+
+footer a:hover {
+    color: #7b0086;
 }
 
 /* *********************/
