@@ -34,19 +34,3 @@ function efectoHabilidades(){
       document.getElementById("html").classList.add("barra-progreso5");
   }
 }
-
-// Cambio de idioma
-function changeLanguage(lang){
-  location.hash = lang;
-  location.reload();
-}
-    
-if (window.location.hash) { 
-  if (window.location.hash == "#es"){
-    location.href="indexES.html";
-  } else if (window.location.hash == "#fr"){
-    location.href="indexFR.html";
-  } else if (window.location.hash == "#en"){
-    location.href="index.html";
-  }
-}

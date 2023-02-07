@@ -41,6 +41,7 @@ html {
     max-width: 45px;
     max-height: 37px;
     padding-right: 5%;
+    cursor: pointer;
 }
 
 .inicio .contenido header h1 {
@@ -234,7 +235,7 @@ html {
     background-color: #f3f3f3;
 }
 
-#servicios .titulo-seccion {
+.titulo-seccion {
     text-align: center;
     font-size: 22px;
     text-transform: uppercase;
@@ -242,6 +243,7 @@ html {
     text-decoration: underline;
     text-decoration-color: #d3d3d3;
     text-decoration-thickness: 5px;
+    margin-bottom: 2%;
 }
 
 #servicios .fila {
@@ -424,16 +426,6 @@ html {
     max-width: 1100px;
     padding: 100px 0;
     margin: auto;
-}
-
-#portfolio .titulo-seccion {
-    text-align: center;
-    font-size: 22px;
-    text-transform: uppercase;
-    color: #111135;
-    text-decoration: underline;
-    text-decoration-color: #d3d3d3;
-    text-decoration-thickness: 5px;
 }
 
 #portfolio .fila {
