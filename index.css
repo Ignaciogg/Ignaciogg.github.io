@@ -9,12 +9,13 @@
 html {
     scroll-behavior: smooth;
 }
+
 /* *********************/
 /* HEADER */
 /* *********************/
 
 .inicio {
-    background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("img/background1.jpg");
+    background: rgba(0, 0, 0, 0.904);
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -29,12 +30,19 @@ html {
 }
 
 .inicio .contenido header {
-    max-width: 100%;
     margin: auto;
     display: flex;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
+    transition: transform 0.2s ease-out;
+    transform: translateY(0);
+    max-width: 100%;
     padding: 10px 20px;
+  }
+  
+header .hidden {
+    transform: translateY(-100%);
 }
 
 .inicio .contenido header div a img{
@@ -51,96 +59,87 @@ html {
     margin-right: -15%;
 }
 
-.inicio .contenido header nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-.inicio .contenido header nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    margin-right: 50px;
-    font-weight: 400;
-    transition: .5s;
-}
-
-.inicio .contenido header nav ul li a:hover {
-    color: #7b0086;
-}
-
-.inicio .contenido header .redes a {
+.inicio .redes a {
     text-decoration: none;
     color: #fff;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 15px;
     transition: .5s;
-}
-
-.inicio .contenido header .redes a:hover {
-    color: #7b0086;
-}
-
-.inicio .contenido header .seleccionado {
-    color: #7b0086;
-}
-
-.inicio .contenido .presentacion {
-    max-width: 1100px;
-    height: 100vh;
-    margin: auto;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.inicio .contenido .presentacion .bienvenida {
-    font-size: 16px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-}
-
-.inicio .contenido .presentacion h2 {
-    font-size: 25px;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.inicio .contenido .presentacion h2 span {
-    font-size: 27px;
-    color: #974f9e;
-}
-
-.inicio .contenido .presentacion .descripcion {
-    max-width: 700px;
-    margin: 25px auto;
-    font-size: 18px;
-    text-align: center;
-}
-
-.inicio .contenido .presentacion a {
-    text-decoration: none;
-    display: inline-block;
-    margin: 25px;
-    padding: 20px 25px;
-    border: 2px solid #fff;
-    border-radius: 50px;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: .5s;
-}
-
-.redes a{
     margin: 10px;
     font-size: 25px;
 }
 
-.inicio .contenido .presentacion a:hover {
-    background-color: #7b0086;
+.inicio .redes a:hover {
+    color: #7b0086;
+}
+
+.inicio .seleccionado {
+    color: #7b0086;
+}
+
+.inicio .presentacion {
+    max-width: 1300px;
+    height: 100vh;
+    margin: auto;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicio .presentacion-enlaces{
+    display: flex;
+    float: left;
+    padding: 20px;
+}
+
+.inicio .presentacion-enlaces ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.inicio .presentacion-enlaces ul li{
+    margin: 20px 0px;
+}
+
+.inicio .presentacion-enlaces ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-decoration: underline;
+    font-size: 70px;
+    font-weight: 400;
+    transition: .5s;
+    text-decoration-thickness: 3px;
+}
+
+.inicio .presentacion-enlaces ul li a:hover {
+    color: #7b0086;
+}
+
+.inicio .presetacion-texto{
+    display: flex;
+    float: right;
+    padding: 20px;
+}
+
+.inicio .presentacion-texto h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.inicio .presentacion-texto h2 span {
+    font-size: 35px;
+    color: #974f9e;
+}
+
+.inicio .presentacion-texto .descripcion {
+    max-width: 700px;
+    margin: 25px auto;
+    font-size: 18px;
+    text-align: right;
 }
 
 #icono-nav {
@@ -154,7 +153,7 @@ html {
 #sobremi {
     max-width: 1100px;
     margin: auto;
-    padding: 100px 15px;
+    padding: 150px 15px;
     color: #111135;
     display: flex;
 }
@@ -225,6 +224,7 @@ html {
     background-color: #7b0086;
     color: #fff;
 }
+
 /* *********************/
 /* SERVICES */
 /* *********************/
@@ -299,6 +299,7 @@ html {
     font-size: 14px;
     line-height: 22px;
 }
+
 /* *********************/
 /* SKILLS */
 /* *********************/
@@ -339,35 +340,35 @@ html {
     margin: 10px 0px;
 }
 
-.contenedor-skills .skill .barra .barra-progreso1 {
+.barra-progreso1 {
     background-color: #fff;
     width: 85%;
     height: 6px;
     animation: progreso1 2s forwards;
 }
 
-.contenedor-skills .skill .barra .barra-progreso2 {
+.barra-progreso2 {
     background-color: #fff;
     width: 80%;
     height: 6px;
     animation: progreso2 2s forwards;
 }
 
-.contenedor-skills .skill .barra .barra-progreso3 {
+.barra-progreso3 {
     background-color: #fff;
     width: 70%;
     height: 6px;
     animation: progreso3 2s forwards;
 }
 
-.contenedor-skills .skill .barra .barra-progreso4 {
+.barra-progreso4 {
     background-color: #fff;
     width: 70%;
     height: 6px;
     animation: progreso4 2s forwards;
 }
 
-.contenedor-skills .skill .barra .barra-progreso5 {
+.barra-progreso5 {
     background-color: #fff;
     width: 60%;
     height: 6px;
@@ -418,6 +419,7 @@ html {
         width: 60%;
     }
 }
+
 /* *********************/
 /* PORTFOLIO */
 /* *********************/
@@ -503,33 +505,17 @@ footer a:hover {
     .redes {
         display: none;
     }
-    nav {
-        display: none;
-    }
-    nav.responsive {
-        display: block;
-        background-color: rgba(0, 0, 0, .8);
-        width: 100%;
-        position: absolute;
-        top: 48px;
-        left: 0;
-        padding: 10px 0;
-    }
     .inicio .contenido header h1{
         margin-right: 8%;
-    }
-    nav.responsive ul {
-        display: block !important;
-        text-align: center;
-    }
-    nav.responsive ul li {
-        margin: 5px 0;
     }
     #icono-nav {
         display: block;
     }
-    .inicio .contenido .presentacion h2 {
-        font-size: 27px;
+    .presentacion-enlaces ul li a{
+        font-size: 30px;
+    }
+    .presentacion-texto{
+        display: none;
     }
 
     /* ABOUT ME */
@@ -578,5 +564,8 @@ footer a:hover {
     #portfolio .fila .proyecto {
         max-width: fit-content;
         margin: 10px auto;
+    }
+    #portfolio .fila .proyecto img{
+        filter: grayscale(0);
     }
 }

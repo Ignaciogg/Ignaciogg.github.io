@@ -8,15 +8,19 @@ function seleccionar(link){
   link.className = "seleccionado";
 }
 
-// Menú responsive
-function responsiveMenu(){
-  var x = document.getElementById("nav");
-  if (x.className === ""){
-    x.className = "responsive";
+// Animacióon ocultar-mostrar header
+const header = document.getElementById("header");
+let prevScrollPos = window.pageYOffset;
+
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    header.classList.remove("hidden");
   } else {
-    x.className = "";
+    header.classList.add("hidden");
   }
-}
+  prevScrollPos = currentScrollPos;
+};
 
 // Animación barra de skills
 window.onscroll = function(){ 
