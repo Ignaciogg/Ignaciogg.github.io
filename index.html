@@ -18,9 +18,9 @@
         <div class="contenido">
             <header>
                 <div class="banderas">
-                    <a href="/indexES.html"><img src="img/spanish.png"></a>
-                    <a href="/index.html"><img src="img/english.png"></a>
-                    <a href="/indexFR.html"><img src="img/french.png"></a>
+                    <a class="translate" id="es"><img src="img/spanish.png"></a>
+                    <a class="translate" id="en"><img src="img/english.png"></a>
+                    <a class="translate" id="fr"><img src="img/french.png"></a>
                 </div>
                 <h1>/IGG/</h1>
                 <div class="redes">
@@ -33,15 +33,15 @@
             <div class="presentacion">
                 <div class="presentacion-enlaces">
                     <ul id="links">
-                        <li><a href="#sobremi" onclick="seleccionar(this)">ABOUT ME</a></li>
-                        <li><a href="#servicios" onclick="seleccionar(this)">SERVICES</a></li>
+                        <li><a href="#sobremi" onclick="seleccionar(this)" class="lang" key="presentacion-enlaces1">ABOUT ME</a></li>
+                        <li><a href="#servicios" onclick="seleccionar(this)" class="lang" key="presentacion-enlaces2">SERVICES</a></li>
                         <li><a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a></li>
                     </ul>
                 </div>
                 <div class="presentacion-texto">
-                    <h2>Welcome</h2>
-                    <h2>My name is <span>Ignacio Gil Garzon</span>, and I'm a Programmer and Web Dev</h2>
-                    <p class="descripcion">Currently looking for internships starting September 2023</p>
+                    <h2 class="lang" key="bienvenida">Welcome</h2>
+                    <h2 class="lang" key="nombre">My name is <span id="nombreMorado">Ignacio Gil Garzon</span>, and I'm a Programmer and Web Dev</h2>
+                    <p class="descripcion lang" key="mensajeInicio">Currently looking for internships starting September 2023</p>
                 </div>
             </div>
         </div>
@@ -53,75 +53,75 @@
             <img src="img/fotoperfil.jpg" alt="">
         </div>
         <div class="sobremi">
-            <p class="titulo-seccion">About me</p>
+            <p class="titulo-seccion lang" key="presentacion-enlaces1">ABOUT ME</p>
             <h2>Hi, I'm <span>Ignacio Gil</span> </h2>
-            <h3>Programmer & Web Developer</h3>
-            <p>Hi, I'm Ignacio, a 21 year old developer from Madrid, Spain, and I have been a tech enthusiast ever sice I built my first PC back in 2017.</p>
-            <p>At the moment, I'm studying third year of Computer Science at the European University of Madrid.</p>
-            <p>Other courses where I've been involved include Java programming course at Oxford Summer Courses and Google Growth online course.</p>
-            <a href="/cv/CV IGG.pdf" download>Download CV</a>
+            <h3 class="lang" key="trabajo">Programmer & Web Developer</h3>
+            <p class="lang" key="descripcion1">Hi, I'm Ignacio, a 21 year old developer from Madrid, Spain, and I have been a tech enthusiast ever sice I built my first PC back in 2017.</p>
+            <p class="lang" key="descripcion2">At the moment, I'm studying third year of Computer Science at the European University of Madrid.</p>
+            <p class="lang" key="descripcion3">Other courses where I've been involved include Java programming course at Oxford Summer Courses and Google Growth online course.</p>
+            <a class="lang" key="descargaCV" href="/cv/CV IGG.pdf" download>Download CV</a>
         </div>
     </section>
 
     <!-- Services -->
     <section id="servicios">
-        <h3 class="titulo-seccion">SERVICES</h3>
+        <h3 class="titulo-seccion lang" key="presentacion-enlaces2">SERVICES</h3>
         <div class="fila">
             <div class="servicio">
                 <span class="icono"> <i class="fa-solid fa-code"></i></span>
-                <h4>Web Design</h4>
+                <h4 class="lang" key="nombreServicio1">Web Design</h4>
                 <hr>
                 <ul class="servicios-tag">
-                    <li>HTML, CSS & JS</li>
+                    <li class="lang" key="tagServicio1">HTML, CSS & JS</li>
                 </ul>
-                <p>I have been providing web design services for 2 years.</p>
+                <p class="lang" key="descripcionServicio1">I have been providing web design services for 2 years.</p>
             </div>
             <div class="servicio">
                 <span class="icono"><i class="fa-solid fa-file-code"></i></span>
-                <h4>Java & JavaFX Programming</h4>
+                <h4 class="lang" key="nombreServicio2">Java & JavaFX Programming</h4>
                 <hr>
                 <ul class="servicios-tag">
-                    <li>Java</li>
+                    <li class="lang" key="tagServicio2">Java</li>
                 </ul>
-                <p>I have worked in different Java interface projects, the most interesting ones can be found in the Portfolio.</p>
+                <p class="lang" key="descripcionServicio2">I have worked in different Java interface projects, the most interesting ones can be found in the Portfolio.</p>
             </div>
             <div class="servicio">
                 <span class="icono"><i class="fa-solid fa-microchip"></i></span>
-                <h4>AI & ML algorithms</h4>
+                <h4 class="lang" key="nombreServicio3">AI & ML algorithms</h4>
                 <hr>
                 <ul class="servicios-tag">
-                    <li>Bayes, K-nearest</li>
+                    <li class="lang" key="tagServicio3">Bayes, K-nearest</li>
                 </ul>
-                <p>I have worked in various projects regarding AI and Machine Learning, the most interesting ones in the Portfolio.</p>
+                <p class="lang" key="descripcionServicio3">I have worked in various projects regarding AI and Machine Learning, the most interesting ones in the Portfolio.</p>
             </div>
         </div>
         <div class="fila">
             <div class="servicio">
                 <span class="icono"><i class="fa-solid fa-database"></i></span>
-                <h4>Data Bases</h4>
+                <h4 class="lang" key="nombreServicio4">Data Bases</h4>
                 <hr>
                 <ul class="servicios-tag">
-                    <li>SQL, Firebase DB</li>
+                    <li class="lang" key="tagServicio4">SQL, Firebase DB</li>
                 </ul>
-                <p>Creation and management of SQL and Firebase databases for different projects.</p>
+                <p class="lang" key="descripcionServicio4">Creation and management of SQL and Firebase databases for different projects.</p>
             </div>
             <div class="servicio">
                 <span class="icono"><i class="fa-solid fa-chalkboard-user"></i></i></span>
-                <h4>Teacher</h4>
+                <h4 class="lang" key="nombreServicio5">Teacher</h4>
                 <hr>
                 <ul class="servicios-tag">
-                    <li>Java & Python</li>
+                    <li class="lang" key="tagServicio5">Java & Python</li>
                 </ul>
-                <p>I've teached basic programming with Java and Python for 2 years and ongoing.</p>
+                <p class="lang" key="descripcionServicio5">I've teached basic programming with Java and Python for 2 years and ongoing.</p>
             </div>
             <div class="servicio">
                 <span class="icono"><i class="fa-solid fa-person-circle-question"></i></span>
-                <h4>External Consultant</h4>
+                <h4 class="lang" key="nombreServicio6">External Consultant</h4>
                 <hr>
                 <ul class="servicios-tag">
-                    <li>General or specific advice</li>
+                    <li class="lang" key="tagServicio6">General or specific advice</li>
                 </ul>
-                <p>I can provide external advice regarding programming, web design, AI or sorting algorithms.</p>
+                <p class="lang" key="descripcionServicio6">I can provide external advice regarding programming, web design, AI or sorting algorithms.</p>
             </div>
         </div>
     </section>
@@ -183,30 +183,30 @@
 
     <!-- Portfolio -->
     <section id="portfolio">
-        <h3 class="titulo-seccion">My Projects</h3>
+        <h3 class="titulo-seccion">PORTFOLIO</h3>
         <div class="fila">
             <div class="proyecto">
                 <div class="overlay"></div>
                 <a href="https://github.com/Ignaciogg/MediTech"><img src="img/logo Meditech.png" alt="Meditech"></a>
                 <div class="info">
-                    <h4>Text editing with Java</h4>
-                    <p>Meditech</p>
+                    <h4 class="lang" key="descripcionPortfolio1">Text editing with Java trough TXT files</h4>
+                    <p class="lang" key="nombrePortfolio1">Meditech</p>
                 </div>
             </div>
             <div class="proyecto">
                 <div class="overlay"></div>
                 <a href="https://github.com/Ignaciogg/Go2TheTop"><img src="img/logoGO2.jpeg" alt="Go2TheTop"></a>
                 <div class="info">
-                    <h4>JavaFX interface connecting Arduino to DB</h4>
-                    <p>Go2TheTop</p>
+                    <h4 class="lang" key="descripcionPortfolio2">JavaFX interface connecting Arduino to DB</h4>
+                    <p class="lang" key="nombrePortfolio2">Go2TheTop</p>
                 </div>
             </div>
             <div class="proyecto">
                 <div class="overlay"></div>
                 <a href="https://github.com/Ignaciogg/ReadyRecipes"><img src="img/logo ReadyRecipes.png" alt="ReadyRecipes"></a>
                 <div class="info">
-                    <h4>Recipe classifier with AI</h4>
-                    <p>ReadyRecipes</p>
+                    <h4 class="lang" key="descripcionPortfolio3">Recipe classifier with AI</h4>
+                    <p class="lang" key="nombrePortfolio3">ReadyRecipes</p>
                 </div>
             </div>
         </div>
@@ -215,24 +215,24 @@
                 <div class="overlay"></div>
                 <a href="https://github.com/Ignaciogg/SSII-Movielens"><img src="img/logo Movielens.png" alt="MovieLens project"></a>
                 <div class="info">
-                    <h4>Movie recommender using MovieLens data</h4>
-                    <p>MovieLens project</p>
+                    <h4 class="lang" key="descripcionPortfolio4">Movie recommender using MovieLens data</h4>
+                    <p class="lang" key="nombrePortfolio4">MovieLens project</p>
                 </div>
             </div>
             <div class="proyecto">
                 <div class="overlay"></div>
                 <a href="https://github.com/Ignaciogg/WEB-ClubDeDeporte"><img src="img/logo clubUEM.png" alt="UEM Sports club web"></a>
                 <div class="info">
-                    <h4>A simple webpage for a university sports club</h4>
-                    <p>UEM Sports club web</p>
+                    <h4 class="lang" key="descripcionPortfolio5">A simple webpage for a university sports club</h4>
+                    <p class="lang" key="nombrePortfolio5">UEM Sports club web</p>
                 </div>
             </div>
             <div class="proyecto">
                 <div class="overlay"></div>
                 <a href="https://github.com/Ignaciogg/IA-P2-ML-Pokemon"><img src="img/ml.jpg" alt="Pokemon AI"></a>
                 <div class="info">
-                    <h4>Machine Learning algorithms applied to Pokemon</h4>
-                    <p>Pokemon AI</p>
+                    <h4 class="lang" key="descripcionPortfolio6">Machine Learning algorithms applied to Pokemon</h4>
+                    <p class="lang" key="nombrePortfolio6">Pokemon AI</p>
                 </div>
             </div>
         </div>
@@ -241,24 +241,24 @@
                 <div class="overlay"></div>
                 <a href="https://github.com/Ignaciogg/POO-RatonyGato"><img src="img/ratonygato.jpg" alt="Cat & Mouse"></a>
                 <div class="info">
-                    <h4>Java Swing programming</h4>
-                    <p>Cat & Mouse</p>
+                    <h4 class="lang" key="descripcionPortfolio7">Java Swing game programming</h4>
+                    <p class="lang" key="nombrePortfolio7">Cat & Mouse</p>
                 </div>
             </div>
             <div class="proyecto">
                 <div class="overlay"></div>
                 <a href="https://github.com/Ignaciogg/Covid-QR-Check"><img src="img/qr.png" alt="QR-Check"></a>
                 <div class="info">
-                    <h4>Covid QR check using Python, NodeJS and Firebase</h4>
-                    <p>QR-Check</p>
+                    <h4 class="lang" key="descripcionPortfolio8">Covid QR check using Python, NodeJS and Firebase</h4>
+                    <p class="lang" key="nombrePortfolio8">QR-Check</p>
                 </div>
             </div>
             <div class="proyecto">
                 <div class="overlay"></div>
                 <a href="https://github.com/Ignaciogg/Practicas-TPA"><img src="img/quick.png" alt="Java algorithms"></a>
                 <div class="info">
-                    <h4>Quicksort, Mergesort, Binary search algorithms using Java</h4>
-                    <p>Java algorithms</p>
+                    <h4 class="lang" key="descripcionPortfolio9">Quicksort, Mergesort, Binary search algorithms using Java</h4>
+                    <p class="lang" key="nombrePortfolio9">Java algorithms</p>
                 </div>
             </div>
         </div>
@@ -274,6 +274,7 @@
         </div>
 
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -1,3 +1,25 @@
+// Cambiar de idioma usando JSON
+$.getJSON("./lang.json", function(json){
+  //Lenguaje por defecto de la página sessionStorage.setItem("lang", "idioma")"
+  if(!localStorage.getItem("lang")){
+    localStorage.setItem("lang", "en");
+  }
+  var lang = localStorage.getItem("lang");
+  var doc = json;
+  $('.lang').each(function(index, element){
+    $(this).text(doc[lang][$(this).attr('key')]);
+  });
+
+  $('.translate').click(function(){
+    localStorage.setItem("lang", $(this).attr('id')) ;
+    var lang = $(this).attr('id');
+    var doc = json;
+      $('.lang').each(function(index, element){
+        $(this).text(doc[lang][$(this).attr('key')]);
+      });
+  });
+});
+
 // Seleccionar nav
 function seleccionar(link){
   var opciones = document.querySelectorAll('#links  a');
@@ -8,7 +30,7 @@ function seleccionar(link){
   link.className = "seleccionado";
 }
 
-// Animacióon ocultar-mostrar header
+// Animación ocultar-mostrar header
 const header = document.getElementById("header");
 let prevScrollPos = window.pageYOffset;
 
