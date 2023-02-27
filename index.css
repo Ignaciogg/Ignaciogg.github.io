@@ -147,14 +147,13 @@ header .hidden {
     display: none;
 }
 /* *********************/
-/* ABOUT ME */
+/* SOBRE MÍ */
 /* *********************/
 
 #sobremi {
     max-width: 1100px;
     margin: auto;
     padding: 150px 15px;
-    color: #111135;
     display: flex;
 }
 
@@ -184,8 +183,8 @@ header .hidden {
 }
 
 #sobremi .sobremi h2 {
-    font-size: 34px;
     font-weight: bold;
+    font-size: 34px;
     margin: 20px 0;
     letter-spacing: 2px;
 }
@@ -195,9 +194,9 @@ header .hidden {
 }
 
 #sobremi .sobremi h3 {
+    text-transform: uppercase;
     font-size: 18px;
     font-weight: 500;
-    text-transform: uppercase;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
@@ -213,8 +212,8 @@ header .hidden {
     display: inline-block;
     text-decoration: none;
     color: #000;
-    border-radius: 30px;
     border: 1px solid #000;
+    border-radius: 30px;
     padding: 10px 20px;
     margin-top: 30px;
     transition: .5s;
@@ -226,7 +225,7 @@ header .hidden {
 }
 
 /* *********************/
-/* SERVICES */
+/* SERVICIOS */
 /* *********************/
 
 #servicios {
@@ -237,11 +236,11 @@ header .hidden {
 
 .titulo-seccion {
     text-align: center;
-    font-size: 22px;
     text-transform: uppercase;
     color: #111135;
-    text-decoration: underline;
     text-decoration-color: #d3d3d3;
+    text-decoration: underline;
+    font-size: 22px;
     text-decoration-thickness: 5px;
     margin-bottom: 2%;
 }
@@ -254,8 +253,8 @@ header .hidden {
 }
 
 #servicios .fila .servicio {
-    max-width: 350px;
     background-color: #fff;
+    max-width: 350px;
     padding: 30px;
     margin: 0 5px;
     border-radius: 5px;
@@ -267,11 +266,11 @@ header .hidden {
 }
 
 #servicios .fila .servicio .icono {
+    background-color: #d3d3d3;
     display: inline-block;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #d3d3d3;
     padding: 20px;
     margin-bottom: 25px;
 }
@@ -282,10 +281,10 @@ header .hidden {
 }
 
 #servicios .fila .servicio hr {
-    width: 30%;
     margin: auto;
     color: #000;
     margin-bottom: 25px;
+    width: 30%;
 }
 
 #servicios .fila .servicio ul {
