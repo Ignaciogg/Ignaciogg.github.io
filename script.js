@@ -31,24 +31,26 @@ function seleccionar(link){
 }
 
 // Animación ocultar-mostrar header
-const header = document.getElementById("header");
+const header = document.querySelector("header");
 let prevScrollPos = window.pageYOffset;
 
-window.onscroll = function() {
+window.onscroll = function(){
   let currentScrollPos = window.pageYOffset;
   if (prevScrollPos > currentScrollPos) {
-    header.classList.remove("hidden");
+    setTimeout(function() {
+      header.classList.remove("hidden");
+    }, 100);
   } else {
-    header.classList.add("hidden");
+    setTimeout(function() {
+      header.classList.add("hidden");
+    }, 100);
   }
   prevScrollPos = currentScrollPos;
-};
 
-// Animación barra de skills
-window.onscroll = function(){ 
   efectoHabilidades() 
 };
 
+// Animación barra de skills
 function efectoHabilidades(){
   var skills = document.getElementById("skills");
   var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;

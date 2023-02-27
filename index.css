@@ -29,30 +29,34 @@ html {
     top: 0;
 }
 
-.inicio .contenido header {
+header {
     margin: auto;
-    display: flex;
     position: fixed;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.2s ease-out;
     transform: translateY(0);
     max-width: 100%;
     padding: 10px 20px;
+    transition: height 0.3s ease-out, opacity 0.3s ease-out;
   }
+
+.show {
+    display: flex;
+}
   
-header .hidden {
-    transform: translateY(-100%);
+.hidden {
+    opacity: 0;
+    height: -10;
 }
 
-.inicio .contenido header div a img{
+header div a img{
     max-width: 45px;
     max-height: 37px;
     padding-right: 5%;
     cursor: pointer;
 }
 
-.inicio .contenido header h1 {
+header h1 {
     text-align: center;
     color: #7b0086;
     margin-left: -15%;
