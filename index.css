@@ -108,13 +108,13 @@ header h1 {
     color: #fff;
     text-decoration: underline;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke: 1px var(--clr);
     font-size: 5em;
     line-height: 2em;
     letter-spacing: 2px;
     font-weight: 700;
     transition: .5s;
-    text-decoration-thickness: 3px;
+    max-height: 160px;
 }
 
 .inicio .presentacion-enlaces ul li a:before{
@@ -124,13 +124,15 @@ header h1 {
     color: #fff;
     width: 0;
     transition: 1s;
-    border-right: 8px solid #fff;
+    border-right: 8px solid var(--clr);
     -webkit-text-stroke: 1px var(--clr);
+    max-height: 160px;
 }
 
 .inicio .presentacion-enlaces ul li a:hover::before{
     width: 100%;
     filter: drop-shadow(0 0 25px var(--clr));
+    max-height: 160px;
 }
 
 .inicio .presetacion-texto{

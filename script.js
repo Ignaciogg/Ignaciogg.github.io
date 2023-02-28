@@ -20,16 +20,6 @@ $.getJSON("./lang.json", function(json){
   });
 });
 
-// Seleccionar nav
-function seleccionar(link){
-  var opciones = document.querySelectorAll('#links  a');
-  opciones[0].className = "";
-  opciones[1].className = "";
-  opciones[2].className = "";
-  opciones[3].className = "";
-  link.className = "seleccionado";
-}
-
 // Modo oscuro
 let invertirTheme = 0;
 function modoOscuro() {
