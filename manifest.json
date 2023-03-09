@@ -1,0 +1,15 @@
+{
+    "name": "Portfolio Ignacio Gil Garzón",
+    "short_name": "IGG",
+    "icons": [
+      {
+        "src": "/img/igg.webp",
+        "type": "image/webp",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "rgba(0, 0, 0, 0.904)",
+    "theme_color": "#7b0086"
+  }
