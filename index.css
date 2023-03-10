@@ -103,20 +103,6 @@ header h1 {
     position: relative;
 }
 
-.inicio .presentacion-enlaces ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-decoration: underline;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--clr);
-    font-size: 5em;
-    line-height: 2em;
-    letter-spacing: 2px;
-    font-weight: 700;
-    transition: .5s;
-    max-height: 160px;
-}
-
 .inicio .presentacion-enlaces ul li a:before{
     content: attr(enlaces);
     position: absolute;
@@ -516,19 +502,60 @@ footer a:hover {
 /* *********************/
 /* RESPONSIVE */
 /* *********************/
+/* Escritorio grande */
+@media only screen and (min-width: 992px){
+    .inicio .presentacion-enlaces ul li a{
+        text-decoration: none;
+        color: #fff;
+        text-decoration: underline;
+        color: transparent;
+        -webkit-text-stroke: 1px var(--clr);
+        font-size: 5em;
+        line-height: 2em;
+        letter-spacing: 2px;
+        font-weight: 700;
+        transition: .5s;
+        max-height: 160px;
+    }
+}
 
-@media screen and (max-width: 1000px) {
+/* Tablets y phablets */
+@media only screen and (min-width: 576px) and (max-width: 991px){
+    
+}
+
+/* Teléfonos */
+@media only screen and (max-width: 575px){
     .redes {
         display: none;
     }
     .inicio .contenido header h1{
         margin-right: 8%;
     }
+    .inicio .presentacion{
+        align-items: baseline;
+    }
     #icono-nav {
         display: block;
     }
+    .presentacion-enlaces{
+        margin-top: 5em;
+    }
+    .presentacion-enlaces ul{
+        gap: 100px;
+    }
     .presentacion-enlaces ul li a{
-        font-size: 30px;
+        font-size: 2em;
+        text-decoration: none;
+        color: #fff;
+        text-decoration: underline;
+        color: transparent;
+        -webkit-text-stroke: 1px var(--clr);
+        line-height: 2em;
+        letter-spacing: 2px;
+        font-weight: 700;
+        transition: .5s;
+        max-height: 40px;
     }
     .presentacion-texto{
         display: none;
