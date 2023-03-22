@@ -1,6 +1,12 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 :root {
-    background-color: #323239;
+    --colorBack: #323239;
+    background-color: var(--colorBack);
     margin-left: 5vw;
     margin-right: 5vw;
     margin-bottom: 10px;
+
+    padding: 0;
+    list-style: none;
 }
