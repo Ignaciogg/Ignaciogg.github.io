@@ -1,0 +1,12 @@
+footer{
+    background-color: var(--colorBack);
+    color: var(--colorTextoBlanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
