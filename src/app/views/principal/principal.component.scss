@@ -35,6 +35,7 @@
 
                     ul{
                         display: flex;
+                        justify-content: center;
                         flex-direction: row;
                         gap: 1.5rem;
                         li{
@@ -42,6 +43,9 @@
                             img{
                                 width: 70px;
                                 height: 70px;
+                            }
+                            .tkinter{
+                                border-radius: 20px;
                             }
                         }   
                     }
