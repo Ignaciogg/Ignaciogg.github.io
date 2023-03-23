@@ -2,4 +2,51 @@
     background-color: var(--colorBack);
     color: var(--colorTextoBlanco);
     height: 100vh;
+
+    .bienvenida{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12vh 0;
+
+        .imagen{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                background-color: #cccccc;
+                padding: 10px;
+                border-radius: 20px;
+            }
+        }
+
+        .texto{
+            width: 50%;
+            h1{
+                font-size: 32px;
+            }
+
+            .programas{
+
+                .logos-front, .logos-back{
+                    display: flex;
+                    flex-direction: row;
+
+                    ul{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 1.5rem;
+                        li{
+                            list-style: none;
+                            img{
+                                width: 70px;
+                                height: 70px;
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+    }
 }
