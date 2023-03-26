@@ -21,33 +21,153 @@
             }
         }
 
-        .texto{
-            width: 50%;
-            h1{
-                font-size: 32px;
+        .derecha{
+
+            .texto{
+
+                p{
+                    font-size: 40px;
+                    color: #355c7d;
+                    font-family: 'Fira Code', monospace;
+                    font-weight: 800;
+                    font-size: 20px;
+                    margin: 0 0 0 35%;
+                    text-align: left;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width: 170px;
+                    animation: type 2s steps(40,end) forwards;
+                }
+                  
+                h1 {
+                    opacity: 0;
+                    font-family: "Work Sans", sans-serif;
+                    margin: 0 auto auto auto;
+                    background: linear-gradient(to right, #f8b195, #f67280, #c06c84);
+                    font-weight: 800;
+                    font-size: 32px;  
+                    width: 430px;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    overflow: hidden;
+                    animation: shring-animation 2.2s steps(40,end) 2s forwards, blink .5s step-end infinite alternate;
+                }
+
+                @keyframes shring-animation {
+                    0% {
+                      background-position: 0 0;
+                      opacity: 0;
+                      width: 0;
+                    }
+                    1% {
+                      background-position: 0 0;
+                      opacity: 1;
+                      border-right: 1px solid orange;
+                    }
+                    50% {
+                      background-position: 150px 0;
+                      opacity: 1;
+                      border-right: 1px solid orange;
+                    }
+                    100% {
+                      background-position: 400px 0;
+                      opacity: 1;
+                      border-right: 1px solid orange;
+                    }
+                }
+                  
+                @keyframes type {
+                    0% {
+                      width: 0;
+                    }
+                    1%, 99%{
+                      border-right: 1px solid orange;
+                    }
+                    100%{
+                      border-right: none;
+                    }
+                }
+                  
+                @keyframes blink {
+                    50% {
+                      border-color: transparent;
+                    }
+                }
+                
             }
-
-            .programas{
-
-                .logos-front, .logos-back{
+            .logos-front, .logos-back{
+                margin: 0;
+                padding: 0;
+                
+                ul{
                     display: flex;
+                    justify-content: center;
                     flex-direction: row;
+                    gap: 1.5rem;
+                    li{
+                        list-style: none;
+                        
+                        .tkinter{
+                            border-radius: 20px;
+                        }
+                    }   
+                }
+            }
+        }
+    }
+}
 
-                    ul{
-                        display: flex;
-                        justify-content: center;
-                        flex-direction: row;
-                        gap: 1.5rem;
-                        li{
-                            list-style: none;
-                            img{
-                                width: 70px;
-                                height: 70px;
-                            }
-                            .tkinter{
-                                border-radius: 20px;
-                            }
-                        }   
+@media only screen and (min-width: 900px){
+    .logos-front, .logos-back{
+        display: flex;
+        flex-direction: row;
+        ul{
+            li{
+                img{
+                    width: 70px;
+                    height: 70px;
+                }
+            }   
+        }
+    }
+    .derecha{
+        display: flex;
+        flex-flow: column;
+        .programas{
+            display: flex;
+            flex-flow: column;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .bienvenida{
+        flex-direction: column;
+
+        .imagen{
+            img{
+                height: 300px;
+            }
+        }
+
+        .programas{
+            p{
+                display: flex;
+                justify-content: space-around;
+            }
+            .logos-front, .logos-back{
+                display: flex;
+                flex-direction: column;
+
+                .fila1, .fila2{
+                    display: flex;
+                    
+                    img{
+                        width: 60px;
+                        height: 60px;
+                    }
+                    .tkinter{
+                        border-radius: 20px;
                     }
                 }
             }
