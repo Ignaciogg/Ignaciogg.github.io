@@ -1,9 +1,13 @@
-header{
-    background-color: var(--colorBack);
-    color:var(--colorTextoBlanco);
-    display: flex;
-    justify-content: center;
-    gap: 5%;
+nav{
+    
+    header{
+        background-color: var(--colorBack);
+        color:var(--colorTextoBlanco);
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .container1{
@@ -71,7 +75,53 @@ header{
     }
 }
 
-@media only screen and (min-width: 900px){
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--colorBack);
+    color: var(--colorTextoBlanco);
+    z-index: 999;
+    transition: right 0.3s;
+    overflow-y: auto;
+  }
+  
+  .sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu li {
+    padding: 10px;
+  }
+  
+  .sidebar-menu a {
+    color: var(--colorTextoBlanco);
+  }
+  
+  .sidebar-menu .link {
+    cursor: pointer;
+  }
+
+  .sidebar-menu.open {
+    right: 0;
+  }
+  
+  @media only screen and (max-width: 1150px) {
+    .container1.open {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+@media only screen and (min-width: 1150px){
+    header{
+        gap: 5%;
+    }
     .items1, .items2{
         display: flex;
         gap: 2rem;
@@ -84,13 +134,17 @@ header{
         }
     }
 
-    .responsive-header{
+    .hamburguesa{
         display: none;
     }
 }
 
-@media only screen and (max-width: 900px){
-
+@media only screen and (max-width: 1150px){
+    header{
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }
     .container2, .container3{
         display: none;
     }
@@ -101,7 +155,8 @@ header{
     .container1{
         justify-content: center;
         width: 35%;
-        margin-left: auto;
+        margin-left: 20%;
+        margin-right: 15%;
         .logo{
             display: flex;
             justify-content: center;
@@ -109,10 +164,10 @@ header{
         }
     }
 
-    .responsive-header{
+    .hamburguesa{
         display: flex;
         align-items: center;
-        margin-left: auto;
+        margin-right: 2%;
         .barras{
             color: var(--colorTextoBlanco);
             font-size: 20px;

@@ -1,22 +1,24 @@
 .principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
     background-color: var(--colorBack);
     color: var(--colorTextoBlanco);
-    height: 100vh;
+    height: 87vh;
 
     .bienvenida{
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 12vh 0;
 
         .imagen{
-            width: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             img{
-                background-color: #cccccc;
-                padding: 10px;
+                background-color: var(--colorTextoRojo);
+                padding: 0.5em;
                 border-radius: 20px;
             }
         }
@@ -24,80 +26,31 @@
         .derecha{
 
             .texto{
-
+                width: 100%;
                 p{
-                    font-size: 40px;
-                    color: #355c7d;
-                    font-family: 'Fira Code', monospace;
-                    font-weight: 800;
-                    font-size: 20px;
-                    margin: 0 0 0 35%;
-                    text-align: left;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    width: 170px;
-                    animation: type 2s steps(40,end) forwards;
+                    font-size: clamp(1.3em, 1em + 1.4vw, 1.8em);
+                    font-weight: 500;
+                    margin-bottom: 0;
                 }
                   
                 h1 {
-                    opacity: 0;
-                    font-family: "Work Sans", sans-serif;
-                    margin: 0 auto auto auto;
-                    background: linear-gradient(to right, #f8b195, #f67280, #c06c84);
                     font-weight: 800;
-                    font-size: 32px;  
-                    width: 430px;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    overflow: hidden;
-                    animation: shring-animation 2.2s steps(40,end) 2s forwards, blink .5s step-end infinite alternate;
-                }
-
-                @keyframes shring-animation {
-                    0% {
-                      background-position: 0 0;
-                      opacity: 0;
-                      width: 0;
-                    }
-                    1% {
-                      background-position: 0 0;
-                      opacity: 1;
-                      border-right: 1px solid orange;
-                    }
-                    50% {
-                      background-position: 150px 0;
-                      opacity: 1;
-                      border-right: 1px solid orange;
-                    }
-                    100% {
-                      background-position: 400px 0;
-                      opacity: 1;
-                      border-right: 1px solid orange;
-                    }
-                }
-                  
-                @keyframes type {
-                    0% {
-                      width: 0;
-                    }
-                    1%, 99%{
-                      border-right: 1px solid orange;
-                    }
-                    100%{
-                      border-right: none;
-                    }
-                }
-                  
-                @keyframes blink {
-                    50% {
-                      border-color: transparent;
-                    }
+                    font-size: clamp(2em, 1em + 1.4vw, 3em);  
                 }
                 
             }
+            .texto-front, .texto-back{
+                margin-top: 1rem;
+                font-size: 1.2em;
+                font-weight: 500;
+            }
             .logos-front, .logos-back{
+                display: flex;
+                flex-direction: column;
+                background-color: var(--colorContainerGris);
+                border-radius: 20px;
                 margin: 0;
-                padding: 0;
+                padding: 0.5em;
                 
                 ul{
                     display: flex;
@@ -106,33 +59,60 @@
                     gap: 1.5rem;
                     li{
                         list-style: none;
-                        
-                        .tkinter{
-                            border-radius: 20px;
-                        }
                     }   
                 }
             }
         }
     }
-}
-
-@media only screen and (min-width: 900px){
-    .logos-front, .logos-back{
-        display: flex;
-        flex-direction: row;
-        ul{
-            li{
-                img{
-                    width: 70px;
-                    height: 70px;
-                }
-            }   
+    .descripcion{
+        border-radius: 20px;
+        width: 60%;
+        
+        p{
+            font-size: clamp(0.8em, 0.7em + 1.2vw, 1em);
+            font-weight: 500;
+            padding-bottom: 5vh;
         }
     }
+}
+
+.icon-arrow {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    background-color: var(--colorBack);
+    color: var(--colorTextoBlanco);
+}
+
+@media only screen and (min-width: 1150px){
+    .bienvenida{
+        padding-top: 12vh;
+        padding-bottom: 5vh;
+        .imagen{
+            margin-right: 10%;
+        }
+    }
+    
     .derecha{
         display: flex;
         flex-flow: column;
+
+        .logos-front, .logos-back{
+
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+
+            .fila1, .fila2{
+                display: flex;
+                
+                img{
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
         .programas{
             display: flex;
             flex-flow: column;
@@ -140,34 +120,51 @@
     }
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1150px){
     .bienvenida{
         flex-direction: column;
+        padding-top: 7vh;
+        padding-bottom: 3vh;
 
         .imagen{
+            width: 50%;
             img{
                 height: 300px;
             }
+            margin-bottom: 20px;
         }
 
-        .programas{
-            p{
-                display: flex;
-                justify-content: space-around;
-            }
-            .logos-front, .logos-back{
-                display: flex;
-                flex-direction: column;
+        .derecha{
 
-                .fila1, .fila2{
+            .texto{
+                p, h1{
+                    margin-left: 2vw;
+                }
+            }
+
+            .programas{
+                margin: 0;
+                padding: 0;
+                p{
                     display: flex;
-                    
-                    img{
-                        width: 60px;
-                        height: 60px;
+                    justify-content: space-around;
+                    font-size: 1em;
+                    margin-top: 8%;
+                }
+                .logos-front, .logos-back{
+
+                    ul{
+                        margin: 0;
+                        padding: 0;
                     }
-                    .tkinter{
-                        border-radius: 20px;
+    
+                    .fila1, .fila2{
+                        display: flex;
+                        
+                        img{
+                            width: 60px;
+                            height: 60px;
+                        }
                     }
                 }
             }

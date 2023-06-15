@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   links: any = [
     {
       src: 'https://www.linkedin.com/in/ignacio-gil-garzon/',
@@ -20,4 +20,17 @@ export class HeaderComponent {
       name: 'Contacto'
     }
   ];
+
+  constructor() { }
+
+  ngOnInit(): void {
+    const responsiveHeader = document.querySelector('.hamburguesa') as HTMLElement | null;
+    const sidebarMenu = document.querySelector('.sidebar-menu') as HTMLElement | null;
+    
+    if (responsiveHeader && sidebarMenu) {
+      responsiveHeader.addEventListener('click', () => {
+        sidebarMenu.classList.toggle('open');
+      });
+    }
+  }
 }

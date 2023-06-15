@@ -8,5 +8,19 @@ footer{
     p{
         font-size: 18px;
         font-weight: 500;
+        margin-bottom: 0;
     }
+}
+
+.svg-footer{
+    aspect-ratio: 300/50;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../../assets/img/svg/footer.svg");
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

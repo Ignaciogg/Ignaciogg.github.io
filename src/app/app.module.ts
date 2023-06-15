@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './views/principal/principal.component';
-import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
+import { ProyectosComponent } from './views/proyectos/proyectos.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 
@@ -12,7 +12,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
   declarations: [
     AppComponent,
     PrincipalComponent,
-    PortfolioComponent,
+    ProyectosComponent,
     HeaderComponent,
     FooterComponent
   ],

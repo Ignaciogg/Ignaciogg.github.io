@@ -1,69 +1,66 @@
 <div class="principal">
 
-    <app-header></app-header>
-
     <div class="bienvenida">
         
-        <div class="imagen">
-            <img src="../../../assets/img/fotoperfil.webp" alt="Ignacio Gil" height="450px">
+        <div class="imagen animate__animated animate__fadeInLeft">
+            <img src="../../../assets/img/fotoperfil.webp" alt="Ignacio Gil" height="450px" loading="lazy">
         </div>
-        <div class="derecha">
+        <div class="derecha animate__animated animate__fadeInRight">
             <div class="texto">
-                <p>Buenas, soy</p>
                 <h1>IGNACIO GIL GARZÓN</h1>
                 <p>Estudiante de Ingeniería Informática</p>
             </div>
             <div class="programas">
-                <p class="texto-front">Front-end</p>
+                <p class="texto-front">Mis aptitudes de Front-end</p>
                 <div class="logos-front">
                     <ul>
                         <div class="fila1">
                             <li>
-                                <img src="../../../assets/img/html.webp" alt="HTML5">
+                                <img src="../../../assets/img/html.webp" alt="HTML5" loading="lazy">
                             </li>
                             <li>
-                                <img src="../../../assets/img/css.webp" alt="CSS3">
+                                <img src="../../../assets/img/css.webp" alt="CSS3" loading="lazy">
                             </li>
                             <li>
-                                <img src="../../../assets/img/js.webp" alt="JavaScript">
+                                <img src="../../../assets/img/js.webp" alt="JavaScript" loading="lazy">
                             </li>
                         </div>
                         <div class="fila2">
                             <li>
-                                <img src="../../../assets/img/angular.webp" alt="Angular.js">
+                                <img src="../../../assets/img/angular.webp" alt="Angular.js" loading="lazy">
                             </li>
                             <li>
-                                <img src="../../../assets/img/tkinter.webp" alt="Tkinter" class="tkinter">
+                                <img src="../../../assets/img/react.png" alt="React-native" loading="lazy">
                             </li>
                             <li>
-                                <img src="../../../assets/img/figma.png" alt="Figma">
+                                <img src="../../../assets/img/figma.png" alt="Figma" loading="lazy">
                             </li>
                         </div>
                     </ul>
                 </div>
-                <p id="texto-back">Back-end</p>
+                <p class="texto-back">Mis aptitudes de Back-end</p>
                 <div class="logos-back">
                     <ul>
                         <div class="fila1">
                             <li>
-                                <img src="../../../assets/img/python.webp" alt="Python">
+                                <img src="../../../assets/img/python.webp" alt="Python" loading="lazy">
                             </li>
                             <li>
-                                <img src="../../../assets/img/pandas.webp" alt="Pandas">
+                                <img src="../../../assets/img/pandas.webp" alt="Pandas" loading="lazy">
                             </li>
                             <li>
-                                <img src="../../../assets/img/spark.webp" alt="Spark">
+                                <img src="../../../assets/img/spark.webp" alt="Spark" loading="lazy">
                             </li>
                         </div>
                         <div class="fila2">
                             <li>
-                                <img src="../../../assets/img/google-cloud.png" alt="Google Cloud">
+                                <img src="../../../assets/img/google-cloud.png" alt="Google Cloud" loading="lazy">
                             </li>
                             <li>
-                                <img src="../../../assets/img/java.webp" alt="Java">
+                                <img src="../../../assets/img/java.webp" alt="Java" loading="lazy">
                             </li>
                             <li>
-                                <img src="../../../assets/img/git.webp" alt="Git">
+                                <img src="../../../assets/img/git.webp" alt="Git" loading="lazy">
                             </li>
                         </div>
                     </ul>
@@ -71,4 +68,16 @@
             </div>
         </div>
     </div>
+    <div class="descripcion animate__animated animate__fadeIn">
+        <p>
+            Soy un estudiante de tercer año en Ingeniería Informática, con gran interés por la Inteligencia Artificial, el Análisis de Datos y el Diseño web.<br>
+            Busco no cerrarme ninguna puerta dentro de los ámbitos de la Ingeniería Informática, elaborar proyectos con diferentes tecnologías para aprender un poco de todo.<br>
+            En esta página, expondré algunos de los proyectos que he realizado, tanto de forma individual como en equipo, y que me han ayudado a crecer como desarrollador.
+        </p>
+
+        <span class="icon-arrow" (click)="scrollToProyectos()">
+            <i class="fas fa-arrow-down"></i>
+        </span>
+    </div>
+    
 </div>
