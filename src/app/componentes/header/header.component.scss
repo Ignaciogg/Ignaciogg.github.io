@@ -1,4 +1,5 @@
 nav{
+    width: 100vw;
     
     header{
         background-color: var(--colorBack);
@@ -80,43 +81,43 @@ nav{
     top: 0;
     right: -250px;
     width: 250px;
-    height: 100vh;
+    height: 100svh;
     background-color: var(--colorBack);
     color: var(--colorTextoBlanco);
     z-index: 999;
     transition: right 0.3s;
     overflow-y: auto;
-  }
+}
   
-  .sidebar-menu ul {
+.sidebar-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
+}
   
-  .sidebar-menu li {
+.sidebar-menu li {
     padding: 10px;
-  }
+}
   
-  .sidebar-menu a {
+.sidebar-menu a {
     color: var(--colorTextoBlanco);
-  }
+}
   
-  .sidebar-menu .link {
+.sidebar-menu .link {
     cursor: pointer;
-  }
+}
 
-  .sidebar-menu.open {
+.sidebar-menu.open {
     right: 0;
-  }
+}
   
-  @media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1150px) {
     .container1.open {
       margin-left: 0;
       margin-right: 0;
       width: 100%;
     }
-  }
+}
 
 @media only screen and (min-width: 1150px){
     header{

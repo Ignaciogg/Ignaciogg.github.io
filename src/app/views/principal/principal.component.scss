@@ -1,11 +1,11 @@
 .principal{
     display: flex;
     flex-wrap: wrap;
+    width: 100vw;
     justify-content: center;
     align-content: flex-start;
     background-color: var(--colorBack);
     color: var(--colorTextoBlanco);
-    height: 87vh;
 
     .bienvenida{
         display: flex;
@@ -82,92 +82,172 @@
     font-size: 2rem;
     background-color: var(--colorBack);
     color: var(--colorTextoBlanco);
+
+    i{
+        cursor: pointer;
+    }
+}
+
+.proyectos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200vh;
+    width: 100vw;
+    background-color: var(--colorBack);
+    color: var(--colorTextoBlanco);
+
+    .proyecto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 88vw;
+        height: 88vh;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        margin-top: 2vh;
+        margin-bottom: 2vw;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+
+        .izq, .der{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+            padding: 2vw;
+            border-radius: 20px;
+
+            h2{
+                margin-bottom: 5%;
+            }
+
+            p{
+                font-size: clamp(0.7em, 0.6em + 1.2vw, 1.2em);
+                font-weight: 500;
+            }
+
+            a{
+                text-decoration: none;
+                color: #a600c7;
+                font-size: clamp(0.7em, 0.6em + 1.2vw, 1.2em);
+                font-weight: 500;
+            }
+
+            img{
+                aspect-ratio: 333.3/675.5;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1150px){
-    .bienvenida{
-        padding-top: 12vh;
-        padding-bottom: 5vh;
-        .imagen{
-            margin-right: 10%;
-        }
-    }
-    
-    .derecha{
-        display: flex;
-        flex-flow: column;
+    .principal{
+        height: 100svh;
 
-        .logos-front, .logos-back{
-
-            ul{
-                margin: 0;
-                padding: 0;
-            }
-
-            .fila1, .fila2{
-                display: flex;
-                
-                img{
-                    width: 80px;
-                    height: 80px;
-                }
+        .bienvenida{
+            padding-top: 12vh;
+            padding-bottom: 5vh;
+            .imagen{
+                margin-right: 10%;
             }
         }
-        .programas{
+        
+        .derecha{
             display: flex;
             flex-flow: column;
+    
+            .logos-front, .logos-back{
+    
+                ul{
+                    margin: 0;
+                    padding: 0;
+                }
+    
+                .fila1, .fila2{
+                    display: flex;
+                    
+                    img{
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
+            .programas{
+                display: flex;
+                flex-flow: column;
+            }
+        }
+    }
+
+    .proyectos{
+        img{
+            height: 70vh;
         }
     }
 }
 
 @media only screen and (max-width: 1150px){
-    .bienvenida{
-        flex-direction: column;
-        padding-top: 7vh;
-        padding-bottom: 3vh;
+    .principal{
+        height: fit-content;
 
-        .imagen{
-            width: 50%;
-            img{
-                height: 300px;
-            }
-            margin-bottom: 20px;
-        }
-
-        .derecha{
-
-            .texto{
-                p, h1{
-                    margin-left: 2vw;
-                }
-            }
-
-            .programas{
-                margin: 0;
-                padding: 0;
-                p{
-                    display: flex;
-                    justify-content: space-around;
-                    font-size: 1em;
-                    margin-top: 8%;
-                }
-                .logos-front, .logos-back{
-
-                    ul{
-                        margin: 0;
-                        padding: 0;
-                    }
+        .bienvenida{
+            flex-direction: column;
+            padding-top: 7vh;
+            padding-bottom: 3vh;
     
-                    .fila1, .fila2{
+            .imagen{
+                width: 50%;
+                img{
+                    height: 300px;
+                }
+                margin-bottom: 20px;
+            }
+    
+            .derecha{
+    
+                .texto{
+                    p, h1{
+                        margin-left: 2vw;
+                    }
+                }
+    
+                .programas{
+                    margin: 0;
+                    padding: 0;
+                    p{
                         display: flex;
-                        
-                        img{
-                            width: 60px;
-                            height: 60px;
+                        justify-content: space-around;
+                        font-size: 1em;
+                        margin-top: 8%;
+                    }
+                    .logos-front, .logos-back{
+    
+                        ul{
+                            margin: 0;
+                            padding: 0;
+                        }
+        
+                        .fila1, .fila2{
+                            display: flex;
+                            
+                            img{
+                                width: 60px;
+                                height: 60px;
+                            }
                         }
                     }
                 }
             }
+        }
+    }
+
+    .proyectos{
+        img{
+            height: 40vh;
         }
     }
 }

@@ -33,4 +33,8 @@ export class HeaderComponent implements OnInit {
       });
     }
   }
+
+  recargarPagina() {
+    window.location.reload();
+  }
 }
