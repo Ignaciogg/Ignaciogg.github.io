@@ -8,7 +8,9 @@ import { AppComponent } from './app.component';
 import { PrincipalComponent } from './views/principal/principal.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { KeenSliderComponent } from './componentes/keen-slider/keen-slider.component';
+import { CarruselComponent } from './componentes/carrusel/carrusel.component';
+import { ProyectosComponent } from './views/proyectos/proyectos.component';
+import { ContactoComponent } from './views/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { KeenSliderComponent } from './componentes/keen-slider/keen-slider.compo
     PrincipalComponent,
     HeaderComponent,
     FooterComponent,
-    KeenSliderComponent
+    CarruselComponent,
+    ProyectosComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

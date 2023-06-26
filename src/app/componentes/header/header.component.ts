@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,22 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  links: any = [
-    {
-      src: 'https://www.linkedin.com/in/ignacio-gil-garzon/',
-      name: 'Linkedin'
-    },
-    {
-      src: 'https://github.com/ignaciogg',
-      name: 'Github'
-    },
-    {
-      src: 'mailto:nachogilgarzon@gmail.com',
-      name: 'Contacto'
-    }
-  ];
 
-  constructor() { }
+  constructor(
+      private router: Router
+  ) { }
 
   ngOnInit(): void {
     const responsiveHeader = document.querySelector('.hamburguesa') as HTMLElement | null;
@@ -35,6 +24,9 @@ export class HeaderComponent implements OnInit {
   }
 
   recargarPagina() {
-    window.location.reload();
+    if(this.router.url === '/') {
+      window.location.reload();
+    }else
+      this.router.navigateByUrl('/');
   }
 }
