@@ -136,10 +136,6 @@
                 font-size: clamp(0.7em, 0.6em + 1.2vw, 1.2em);
                 font-weight: 500;
             }
-
-            img{
-                aspect-ratio: 333.3/675.5;
-            }
         }
     }
 }
@@ -246,6 +242,18 @@
     }
 
     .proyectos{
+
+        .horizontal{
+            flex-direction: column-reverse;
+
+            .der{
+                width: 80%;
+            }
+            .izq{
+                width: unset;
+            }
+        }
+
         img{
             height: 40vh;
         }

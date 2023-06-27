@@ -11,6 +11,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { ProyectosComponent } from './views/proyectos/proyectos.component';
 import { ContactoComponent } from './views/contacto/contacto.component';
+import { ServiciosComponent } from './views/servicios/servicios.component';
+import { SobremiComponent } from './views/sobremi/sobremi.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ContactoComponent } from './views/contacto/contacto.component';
     FooterComponent,
     CarruselComponent,
     ProyectosComponent,
-    ContactoComponent
+    ContactoComponent,
+    ServiciosComponent,
+    SobremiComponent
   ],
   imports: [
     BrowserModule,

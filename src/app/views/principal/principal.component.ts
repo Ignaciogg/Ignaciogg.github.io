@@ -94,7 +94,6 @@ export class PrincipalComponent {
     }
   ];
 
-
   scrollToProyectos() {
     const proyectosElement = this.elementRef.nativeElement.querySelector('#proyectos');
     if (proyectosElement)

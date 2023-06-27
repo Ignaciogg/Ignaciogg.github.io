@@ -75,36 +75,43 @@ nav{
         background-color: var(--colorBack);
     }
 }
-
-.sidebar-menu {
+  
+.sidebar-menu{
     position: fixed;
     top: 0;
-    right: -250px;
-    width: 250px;
+    right: -70%;
+    width: 70%;
     height: 100svh;
+    font-size: 1.5rem;
     background-color: var(--colorBack);
     color: var(--colorTextoBlanco);
     z-index: 999;
     transition: right 0.3s;
     overflow-y: auto;
-}
-  
-.sidebar-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-  
-.sidebar-menu li {
-    padding: 10px;
-}
-  
-.sidebar-menu a {
-    color: var(--colorTextoBlanco);
-}
-  
-.sidebar-menu .link {
-    cursor: pointer;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 10px;
+            a {
+                color: var(--colorTextoBlanco);
+            }
+            .link {
+                cursor: pointer;
+            }
+            .home{
+                margin-bottom: 5%;
+            }
+        }
+    } 
+
+    .redes{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10%;
+    }
 }
 
 .sidebar-menu.open {
