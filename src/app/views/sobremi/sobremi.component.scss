@@ -1,0 +1,22 @@
+.sobremi{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: fit-content;
+    margin-top: clamp(1rem, 1rem + 1vh , 5vh);
+    justify-content: center;
+    align-content: flex-start;
+    background-color: var(--colorBack);
+    color: var(--colorTextoBlanco);
+    .timeline{
+        display: flex;
+        flex-direction: column;
+
+        h4{
+            display: flex;
+            margin-top: clamp(1rem, 1rem + 1vh , 5rem);
+            margin-bottom: clamp(1rem, 1rem + 1vh , 5rem);
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let item of items; let i = index" [ngClass]="{ 'left': i % 2 === 0, 'right': i % 2 !== 0 }">
+    <div class="date" [style.background-color]="'#' + item.color">{{ item.ano }}</div>
+    <div class="title">{{ item.nombre }}</div>
+    <div class="descr">{{ item.descripcion }}</div>
+  </li>
+</ul>

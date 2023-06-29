@@ -1,0 +1,10 @@
+.proyectos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 77vh;
+    justify-content: center;
+    align-content: flex-start;
+    background-color: var(--colorBack);
+    color: var(--colorTextoBlanco);
+}

@@ -4,7 +4,6 @@ import { PrincipalComponent } from './views/principal/principal.component';
 import { ContactoComponent } from './views/contacto/contacto.component';
 import { ProyectosComponent } from './views/proyectos/proyectos.component';
 import { SobremiComponent } from './views/sobremi/sobremi.component';
-import { ServiciosComponent } from './views/servicios/servicios.component';
 
 const routes: Routes = [
 
@@ -12,7 +11,6 @@ const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
   { path: 'proyectos', component: ProyectosComponent },
   { path: 'sobremi', component: SobremiComponent },
-  { path: 'servicios', component: ServiciosComponent },
 
 ];
 
