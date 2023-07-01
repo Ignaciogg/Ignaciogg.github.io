@@ -75,7 +75,8 @@ nav{
     }
 
     .btn{
-        background-color: var(--colorBack);
+        color: var(--colorTextoBlanco);
+        background-color: transparent;
     }
 }
   
@@ -84,7 +85,7 @@ nav{
     top: 0;
     right: -70%;
     width: 70%;
-    height: 100svh;
+    height: 100vh;
     font-size: 1.5rem;
     background-color: var(--colorBack);
     color: var(--colorTextoBlanco);
