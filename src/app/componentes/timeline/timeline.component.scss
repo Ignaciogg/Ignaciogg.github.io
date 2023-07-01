@@ -129,11 +129,11 @@ ul li .title {
   overflow: hidden;
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 ul li .descr {
   padding-block-end: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* shadows */
@@ -161,6 +161,7 @@ ul li .descr::before {
 @media only screen and (min-width: 1150px) {
   ul {
     grid-template-columns: 1fr var(--line-w) 1fr;
+    --col-gap: 1rem;
   }
   ul::before {
     grid-column: 2;

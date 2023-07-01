@@ -17,14 +17,27 @@ footer{
     }
 }
 
-.svg-footer{
+.svg-footer {
     aspect-ratio: 300/50;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-image: url("../../../assets/img/svg/footer.svg");
-
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.svg-footer2 {
+    aspect-ratio: 300/50;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../../assets/img/svg/footer2.svg");
+  
     display: flex;
     justify-content: center;
     align-items: center;
