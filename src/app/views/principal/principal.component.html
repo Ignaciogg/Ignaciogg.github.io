@@ -70,7 +70,7 @@
     </div>
     <div class="descripcion animate__animated animate__fadeIn">
         <p>
-            Soy un estudiante de tercer año en Ingeniería Informática, con gran interés por la Inteligencia Artificial, el Análisis de Datos y el Diseño web.<br>
+            Soy un estudiante de cuarto año en Ingeniería Informática, con gran interés por la Inteligencia Artificial, el Análisis de Datos y el Diseño web.<br>
             Busco no cerrarme ninguna puerta dentro de los ámbitos de la Ingeniería Informática, elaborar proyectos con diferentes tecnologías para aprender un poco de todo.<br>
             En esta página, expondré algunos de los proyectos que he realizado, tanto de forma individual como en equipo, y que me han ayudado a crecer como desarrollador.
         </p>
@@ -91,7 +91,7 @@
             <h2>Ready Recipes</h2>
             <p>Aplicación web con Front-end Angular y Back-end Laravel que muestra y filtra recetas de cocina extraídas de YouTube mediante Web-Scraping.</p>
             <p>Cada receta cuenta con su transcripción, sus ingredientes, su precio, su categoría seleccionada mediante Inteligencia Artificial y un análisis de sentimiento de los comentarios.</p>
-            <button>Ver más</button>
+            <button class="btn boton">Ver más</button>
         </div>
     </div>
     <div class="proyecto">
@@ -102,15 +102,18 @@
             <h2>Balú App</h2>
             <p>Prototipo de aplicación móvil hecha con React-native para la cafetería <a href="https://www.just-eat.es/restaurants-balu-acai-boadilla-del-monte">Balú Açaí</a>.</p>
             <p>Desarrollo siguiendo la metodología Design Thinking mediante sketch, wireframe en Balsamiq, mock-up en Figma y este prototipo.</p>
-            <button>Ver más</button>
+            <button class="btn boton">Ver más</button>
         </div>
     </div>
-    <div class="proyecto">
-        <div class="der">
-
-        </div>
+    <div class="proyecto horizontal">
         <div class="izq">
-
+            <carrusel [images]="go2Images" carouselId="slider3" class="go2"></carrusel>
+        </div>
+        <div class="der">
+            <h2>Go2TheTop</h2>
+            <p>Aplicación realizada con JavaFX conectada a una Base de Datos SQL y a su vez a un dispositivo Arduino Uno encargado de leer el oxígeno en sangre y la frecuencia cardíaca de un usuario.</p>
+            <p>Con este proyecto, buscamos aportar un sistema interconectado y personalizable de pulseras para equipos de deportistas que deseen medir la intensidad de sus entrenamientos.</p>
+            <button class="btn boton">Ver más</button>
         </div>
     </div>
 </div>

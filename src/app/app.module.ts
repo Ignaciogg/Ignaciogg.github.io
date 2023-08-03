@@ -13,6 +13,7 @@ import { ProyectosComponent } from './views/proyectos/proyectos.component';
 import { ContactoComponent } from './views/contacto/contacto.component';
 import { SobremiComponent } from './views/sobremi/sobremi.component';
 import { TimelineComponent } from './componentes/timeline/timeline.component';
+import { ProjectCardComponent } from './componentes/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TimelineComponent } from './componentes/timeline/timeline.component';
     ProyectosComponent,
     ContactoComponent,
     SobremiComponent,
-    TimelineComponent
+    TimelineComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,

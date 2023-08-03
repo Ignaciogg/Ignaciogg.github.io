@@ -38,13 +38,13 @@ export class SobremiComponent {
       color: "1B5F8C",
       nombre: 'Cambridge English: Advanced C1',
       ano: "2017",
-      descripcion: 'Certificación de nivel de inglés avanzado 185 puntos.'
+      descripcion: 'Certificación de nivel de inglés avanzado con 185/230 puntos.'
     },
     {
       color: "4CADAD",
       nombre: 'Francés DELF: Nivel B2',
       ano: "2017",
-      descripcion: 'Certificación de nivel de francés avanzado 77,5 puntos.'
+      descripcion: 'Certificación de nivel de francés avanzado 77,5/100 puntos.'
     },
     {
       color: "61C0A8",

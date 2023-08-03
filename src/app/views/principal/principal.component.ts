@@ -22,14 +22,6 @@ export class PrincipalComponent {
       alt: 'Ready 1'
     },
     {
-      src: '../../../assets/img/ReadyRecipes/ready2.webp',
-      alt: 'Ready 2'
-    },
-    {
-      src: '../../../assets/img/ReadyRecipes/ready3.webp',
-      alt: 'Ready 3'
-    },
-    {
       src: '../../../assets/img/ReadyRecipes/ready4.webp',
       alt: 'Ready 4'
     },
@@ -91,6 +83,13 @@ export class PrincipalComponent {
     {
       src: '../../../assets/img/BaluApp/balu16.webp',
       alt: 'Balu 8'
+    }
+  ];
+
+  go2Images: CarouselImage[] = [
+    {
+      src: '../../../assets/img/Go2TheTop/logo-GO2.webp',
+      alt: 'Balu 1'
     }
   ];
 

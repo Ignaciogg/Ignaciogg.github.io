@@ -93,7 +93,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 200vh;
+    height: 220vh;
     width: 100vw;
     background-color: var(--colorBack);
     color: var(--colorTextoBlanco);
@@ -136,6 +136,17 @@
                 font-size: clamp(0.7em, 0.6em + 1.2vw, 1.2em);
                 font-weight: 500;
             }
+
+            .boton{
+                margin-top: 5%;
+                border-radius: 20px;
+                background-color: var(--colorTextoRojo);
+                color: var(--colorTextoBlanco);
+                font-size: clamp(0.5em, 0.4em + 1.2vw, 1em);
+                font-weight: 500;
+                cursor: pointer;
+            }
+
             .vertical {
                 height: auto;
               
@@ -157,6 +168,10 @@
                     object-fit: contain !important;
                   }
                 }
+            }
+
+            .go2{
+                height: auto;
             }
         }
     }
