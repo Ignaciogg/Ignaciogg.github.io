@@ -1,0 +1,16 @@
+<div id="{{carouselId}}" class="carousel slide" [attr.data-bs-ride]="true">
+    <div class="carousel-indicators">
+      <button *ngFor="let image of images; let i = index"
+              type="button"
+              [attr.data-bs-target]="'#' + carouselId"
+              [attr.data-bs-slide-to]="i"
+              [class.active]="i === activeIndex"
+              [attr.aria-current]="i === activeIndex ? 'true' : null"
+              [attr.aria-label]="'Slide ' + (i + 1)"></button>
+    </div>
+    <div class="carousel-inner">
+      <div *ngFor="let image of images; let i = index" class="carousel-item" [class.active]="i === activeIndex">
+        <img class="d-block" [src]="image.src" [alt]="image.alt" loading="lazy">
+      </div>
+    </div>
+</div>

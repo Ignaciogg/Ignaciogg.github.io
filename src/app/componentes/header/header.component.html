@@ -1,0 +1,76 @@
+<nav>
+    <header class="animate__animated animate__slideInDown">
+
+        <div class="container3">
+            <li class="item-menu" (click)="cambiarColor()">
+                <i class="fa-solid fa-moon"></i>
+            </li>
+            <div class="btn-group">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                  ES
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">EN</a></li>
+                  <li><a class="dropdown-item" href="#">FR</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="container1">
+            <div class="items1">
+                <li class="item-menu">
+                    <span class="link" routerLink="/">Home</span>
+                </li>
+                <li class="item-menu">
+                    <span class="link" routerLink="/proyectos">Proyectos</span>
+                </li>
+            </div>
+            <div class="logo">
+                <video width="90" height="50" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" (click)="recargarPagina()" routerLink="./">
+                    <source src="../../../assets/vid/LogoNachSOLO.220.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="items2">
+                <li class="item-menu">
+                    <span class="link" routerLink="/sobremi">Sobre mí</span>
+                </li>
+                <li class="item-menu">
+                    <span class="link" routerLink="/contacto">Contacto</span>
+                </li>
+            </div>
+        </div>
+    
+        <div class="container2">
+            <li class="item-menu">
+                <a href="https://www.linkedin.com/in/ignacio-gil-garzon"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="https://www.github.com/ignaciogg"><i class="fa-brands fa-github"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="mailto:nachogilgarzon@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </li>
+        </div>
+
+        <div class="hamburguesa">
+            <a class="barras">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+</nav>
+
+<div #sidebarMenu class="sidebar-menu">
+    <ul>
+        <li><span class="link home" routerLink="/">Home</span></li>
+        <li><span class="link" routerLink="/proyectos">Proyectos</span></li>
+        <li><span class="link" routerLink="/sobremi">Sobre mí</span></li>
+        <li><span class="link" routerLink="/contacto">Contacto</span></li>
+        <div class="redes">
+            <li><a href="https://www.linkedin.com/in/ignacio-gil-garzon"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://www.github.com/ignaciogg"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="mailto:nachogilgarzon@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+        </div>
+    </ul>
+</div>

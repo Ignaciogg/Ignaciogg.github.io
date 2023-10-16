@@ -1,0 +1,88 @@
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    color: var(--colorTextoBlanco);
+    h2{
+        margin: 0;
+    }
+}
+
+.proyectos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 73vh;
+    justify-content: center;
+    align-content: flex-start;
+    background-color: var(--colorBack);
+    color: var(--colorTextoBlanco);
+
+    .flechaIzq, .flechaDer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 3%;
+
+        i{
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+
+    .contenido{
+        width: 84vw;
+        height: 100%;
+        display: flex;
+
+        .der, .izq{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 42vw;
+            margin: 0;
+
+            .tags{
+                display: flex;
+                flex-direction: row;
+                gap: 0.8rem;
+                margin-top: 1.3rem;
+
+                .tag{
+                    padding: 0.2rem;
+                    background-color: var(--colorTextoRojo);
+                    border-radius: 20px;
+
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+
+            .descripcion{
+                
+            }
+        }
+    }
+}
+
+.contador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--colorTextoBlanco);
+    
+    p{
+        margin: 0;
+    }
+}
+
+* {
+    outline: red dashed 1px;
+}

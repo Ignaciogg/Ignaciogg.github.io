@@ -1,0 +1,26 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+    --colorBack: #323239;
+    --colorTextoBlanco: rgb(233, 233, 233);
+    --colorTextoRojo: #af4f65;
+    --colorTextoAzul: #4f75af;
+    --colorTextoAmarillo: #a9af4f;
+    --colorContainerGris: #7e7e7e;
+    --colorHeader: #323239;
+    --colorSombra: rgba(255, 255, 255, 0.1);
+    background-color: var(--colorBack);
+
+    padding: 0;
+    list-style: none;
+
+    body {
+        overflow-x: hidden;
+        background-color: var(--colorBack);
+        min-width: 400px;
+    }
+
+    @media only screen and (max-width: 1150px){
+        min-width: 300px;
+    }
+}

@@ -1,0 +1,10 @@
+<div class="project-card" (click)="openProjectPopup()">
+  <div class="background-image" [style.backgroundImage]="'url(' + imageUrl + ')'">
+    <div class="project-title">{{ title }}</div>
+    <div class="project-description">{{ description }}</div>
+    <div class="project-tags">
+      <span *ngFor="let tag of tags" class="tag">{{ tag }}</span>
+    </div>
+  </div>
+</div>
+  

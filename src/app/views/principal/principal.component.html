@@ -1,0 +1,121 @@
+<div class="principal">
+
+    <div class="bienvenida">
+        
+        <div class="imagen animate__animated animate__fadeInLeft">
+            <img src="../../../assets/img/fotoperfil.webp" alt="Ignacio Gil" height="450px" loading="lazy">
+        </div>
+        <div class="derecha animate__animated animate__fadeInRight">
+            <div class="texto">
+                <h1>IGNACIO GIL GARZÓN</h1>
+                <p>Estudiante de Ingeniería Informática</p>
+            </div>
+            <div class="programas">
+                <p class="texto-front">Mis aptitudes de Front-end</p>
+                <div class="logos-front">
+                    <ul>
+                        <div class="fila1">
+                            <li>
+                                <img src="../../../assets/img/html.webp" alt="HTML5" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="../../../assets/img/css.webp" alt="CSS3" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="../../../assets/img/js.webp" alt="JavaScript" loading="lazy">
+                            </li>
+                        </div>
+                        <div class="fila2">
+                            <li>
+                                <img src="../../../assets/img/angular.webp" alt="Angular.js" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="../../../assets/img/react.png" alt="React-native" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="../../../assets/img/figma.png" alt="Figma" loading="lazy">
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <p class="texto-back">Mis aptitudes de Back-end</p>
+                <div class="logos-back">
+                    <ul>
+                        <div class="fila1">
+                            <li>
+                                <img src="../../../assets/img/python.webp" alt="Python" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="../../../assets/img/pandas.webp" alt="Pandas" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="../../../assets/img/spark.webp" alt="Spark" loading="lazy">
+                            </li>
+                        </div>
+                        <div class="fila2">
+                            <li>
+                                <img src="../../../assets/img/google-cloud.png" alt="Google Cloud" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="../../../assets/img/java.webp" alt="Java" loading="lazy">
+                            </li>
+                            <li>
+                                <img src="../../../assets/img/git.webp" alt="Git" loading="lazy">
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="descripcion animate__animated animate__fadeIn">
+        <p>
+            Soy un estudiante de cuarto año en Ingeniería Informática, con gran interés por la Inteligencia Artificial, el Análisis de Datos y el Diseño web.<br>
+            Busco no cerrarme ninguna puerta dentro de los ámbitos de la Ingeniería Informática, elaborar proyectos con diferentes tecnologías para aprender un poco de todo.<br>
+            En esta página, expondré algunos de los proyectos que he realizado, tanto de forma individual como en equipo, y que me han ayudado a crecer como desarrollador.
+        </p>
+
+        <span class="icon-arrow" (click)="scrollToProyectos()">
+            <i class="fas fa-arrow-down"></i>
+        </span>
+    </div>
+    
+</div>
+
+<div class="proyectos" id="proyectos">
+    <div class="proyecto horizontal">
+        <div class="izq">
+            <carrusel [images]="readyImages" carouselId="slider1"></carrusel>
+        </div>
+        <div class="der">
+            <h2>Ready Recipes</h2>
+            <p>Aplicación web con Front-end Angular y Back-end Laravel que muestra y filtra recetas de cocina extraídas de YouTube mediante Web-Scraping.</p>
+            <p>Cada receta cuenta con su transcripción, sus ingredientes, su precio, su categoría seleccionada mediante Inteligencia Artificial y un análisis de sentimiento de los comentarios.</p>
+            <button class="btn boton">Ver más</button>
+        </div>
+    </div>
+    <div class="proyecto">
+        <div class="izq">
+            <carrusel [images]="baluImages" carouselId="slider2" class="vertical"></carrusel>
+        </div>
+        <div class="der">
+            <h2>Balú App</h2>
+            <p>Prototipo de aplicación móvil hecha con React-native para la cafetería <a href="https://www.just-eat.es/restaurants-balu-acai-boadilla-del-monte">Balú Açaí</a>.</p>
+            <p>Desarrollo siguiendo la metodología Design Thinking mediante sketch, wireframe en Balsamiq, mock-up en Figma y este prototipo.</p>
+            <button class="btn boton">Ver más</button>
+        </div>
+    </div>
+    <div class="proyecto horizontal">
+        <div class="izq">
+            <carrusel [images]="go2Images" carouselId="slider3" class="go2"></carrusel>
+        </div>
+        <div class="der">
+            <h2>Go2TheTop</h2>
+            <p>Aplicación realizada con JavaFX conectada a una Base de Datos SQL y a su vez a un dispositivo Arduino Uno encargado de leer el oxígeno en sangre y la frecuencia cardíaca de un usuario.</p>
+            <p>Con este proyecto, buscamos aportar un sistema interconectado y personalizable de pulseras para equipos de deportistas que deseen medir la intensidad de sus entrenamientos.</p>
+            <button class="btn boton">Ver más</button>
+        </div>
+    </div>
+</div>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
