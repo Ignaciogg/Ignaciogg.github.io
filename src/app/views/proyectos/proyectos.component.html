@@ -1,53 +1,31 @@
 <div class="titulo">
-    <h2>ReadyRecipes</h2>
+    <h2>{{ proyectoActual.titulo }}</h2>
 </div>
 
 <div class="proyectos">
-    <!--<app-project-card
-        [imageUrl]="'../../../assets/img/ReadyRecipes/ready1.webp'"
-        [title]="'ReadyRecipes'"
-        [description]="'Aplicación realizada con JavaFX conectada a una Base de Datos SQL y a su vez a un dispositivo Arduino Uno encargado de leer el oxígeno en sangre y la frecuencia cardíaca de un usuario. Con este proyecto, buscamos aportar un sistema interconectado y personalizable de pulseras para equipos de deportistas que deseen medir la intensidad de sus entrenamientos.'"
-        [tags]="['Angular', 'Laravel']"
-    />
-    <app-project-card
-        [imageUrl]="'../../../assets/img/Go2TheTop/logoGO2.webp'"
-        [title]="'Go2TheTop'"
-        [description]="'Aplicación realizada con JavaFX conectada a una Base de Datos SQL y a su vez a un dispositivo Arduino Uno encargado de leer el oxígeno en sangre y la frecuencia cardíaca de un usuario. Con este proyecto, buscamos aportar un sistema interconectado y personalizable de pulseras para equipos de deportistas que deseen medir la intensidad de sus entrenamientos.'"
-        [tags]="['Java', 'Arduino']"
-    />
-    <app-project-card
-        [imageUrl]="'../../../assets/img/Go2TheTop/logoGO2.webp'"
-        [title]="'Go2TheTop'"
-        [description]="'Aplicación realizada con JavaFX conectada a una Base de Datos SQL y a su vez a un dispositivo Arduino Uno encargado de leer el oxígeno en sangre y la frecuencia cardíaca de un usuario. Con este proyecto, buscamos aportar un sistema interconectado y personalizable de pulseras para equipos de deportistas que deseen medir la intensidad de sus entrenamientos.'"
-        [tags]="['Java', 'Arduino']"
-    />-->
-
-    <div class="flechaIzq">
+    <div class="flechaIzq" (click)="cambiarProyecto(-1)">
         <i class="fas fa-chevron-left"></i>
     </div>
 
     <div class="contenido">
         <div class="izq">
-            <carrusel [images]="readyImages" carouselId="slider4"></carrusel>
+            <carrusel [images]="proyectoActual.images" carouselId="slider{{ proyectoActualIndex }}"></carrusel>
             <div class="tags">
-                <div class="tag" *ngFor="let tag of readyTags">
-                    <p>{{tag.tag}}</p>
+                <div class="tag" *ngFor="let tag of proyectoActual.tags">
+                    <p>{{ tag }}</p>
                 </div>
             </div>
         </div>
         <div class="der">
-            <div class="descripcion" [innerHTML]="descripcionReady">
-                
-            </div>
+            <div class="descripcion" [innerHTML]="proyectoActual.descripcion"></div>
         </div>
     </div>
 
-    <div class="flechaDer">
+    <div class="flechaDer" (click)="cambiarProyecto(1)">
         <i class="fas fa-chevron-right"></i>
     </div>
-
 </div>
 
 <div class="contador">
-    <P>{{paginaActual}}/9</P>
+    <p>{{ proyectoActualIndex + 1 }}/{{ proyectos.length }}</p>
 </div>
