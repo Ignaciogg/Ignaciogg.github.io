@@ -9,7 +9,18 @@
 
     <div class="contenido">
         <div class="izq">
-            <carrusel [images]="proyectoActual.images" carouselId="slider{{ proyectoActualIndex }}"></carrusel>
+            <ng-container *ngIf="proyectoActual.videoUrl; else carruselContent">
+                <div class="video-container">
+                    <iframe [src]="proyectoActual.videoUrl | safeUrl" title="{{ proyectoActual.titulo }} video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </ng-container>
+            <ng-template #carruselContent>
+                <carrusel [images]="proyectoActual.images" carouselId="slider{{ proyectoActualIndex }}"></carrusel>
+            </ng-template>
             <div class="tags">
                 <div class="tag" *ngFor="let tag of proyectoActual.tags">
                     <p>{{ tag }}</p>
@@ -19,10 +30,9 @@
         <div class="der">
             <div class="descripcion" [innerHTML]="proyectoActual.descripcion"></div>
         </div>
-    </div>
-
-    <div class="flechaDer" (click)="cambiarProyecto(1)">
-        <i class="fas fa-chevron-right"></i>
+        <div class="flechaDer" (click)="cambiarProyecto(1)">
+            <i class="fas fa-chevron-right"></i>
+        </div>
     </div>
 </div>
 

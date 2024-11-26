@@ -14,6 +14,7 @@ import { ContactoComponent } from './views/contacto/contacto.component';
 import { SobremiComponent } from './views/sobremi/sobremi.component';
 import { TimelineComponent } from './componentes/timeline/timeline.component';
 import { ProjectCardComponent } from './componentes/project-card/project-card.component';
+import { SafeUrlPipe } from './safe-url.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProjectCardComponent } from './componentes/project-card/project-card.co
     ContactoComponent,
     SobremiComponent,
     TimelineComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    SafeUrlPipe
   ],
   imports: [
     BrowserModule,
