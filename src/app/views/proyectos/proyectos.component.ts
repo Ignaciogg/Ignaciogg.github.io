@@ -1,6 +1,15 @@
 import { Component, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+interface CarouselImage {
+  src: string;
+  alt: string;
+}
+
+interface TagGroup {
+  tag: string;
+}
+
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
@@ -11,7 +20,6 @@ export class ProyectosComponent {
   paginaActual: number = 1;
   proyectoActualIndex: number = 0;
   currentVideoUrl: string | null = null;
-  isVerticalVideo: boolean = false;
 
   constructor(
     private elementRef: ElementRef,
@@ -28,7 +36,8 @@ export class ProyectosComponent {
       Los resultados incluyen el diseño y desarrollo de la aplicación con funcionalidades avanzadas de análisis de sentimiento y extracción de datos.`,
       tags: ["Microsoft Power Platform", "Web Scraping", "Inteligencia Artificial"],
       images: [],
-      videoUrl:  "https://youtube.com/shorts/PD3LmMie-wo?si=S7UvFtqTHnL83q5K"
+      videoUrl:  "https://youtube.com/shorts/PD3LmMie-wo?si=S7UvFtqTHnL83q5K",
+      videoOrientation: "vertical"
     },
     {
       titulo: "ReadyRecipes",
@@ -41,7 +50,8 @@ export class ProyectosComponent {
         { src: "assets/img/ReadyRecipes/ready4.webp", alt: "Ready 4" },
         { src: "assets/img/ReadyRecipes/ready5.webp", alt: "Ready 5" }
       ],
-      videoUrl: null
+      videoUrl: null,
+      videoOrientation: null
     },
     {
       titulo: "Go2TheTop",
@@ -49,7 +59,8 @@ export class ProyectosComponent {
       Con este proyecto, buscamos aportar un sistema interconectado y personalizable de pulseras para equipos de deportistas que deseen medir la intensidad de sus entrenamientos.`,
       tags: ["Java", "Arduino", "SQL"],
       images: [],
-      videoUrl:  "https://youtu.be/l7p3eqgvFyw?si=efYBs6SonblopVmT"
+      videoUrl:  "https://youtu.be/l7p3eqgvFyw?si=efYBs6SonblopVmT",
+      videoOrientation: "horizontal"
     }
     // Agrega más proyectos aquí
   ];
@@ -64,7 +75,6 @@ export class ProyectosComponent {
       if (id >= 0 && id < this.proyectos.length) {
         this.proyectoActualIndex = id;
         this.currentVideoUrl = this.transformYouTubeUrl(this.proyectos[id].videoUrl);
-        console.log('Transformed URL on init:', this.currentVideoUrl);
       }
     });
   }
@@ -75,7 +85,6 @@ export class ProyectosComponent {
     const nuevoVideoUrl = this.transformYouTubeUrl(this.proyectoActual.videoUrl);
     if (nuevoVideoUrl !== this.currentVideoUrl) {
       this.currentVideoUrl = nuevoVideoUrl;
-      console.log('Transformed URL on change:', this.currentVideoUrl);
     }
     this.router.navigate(['/proyectos', this.proyectoActualIndex], { replaceUrl: true });
   }
@@ -87,10 +96,5 @@ export class ProyectosComponent {
       return `https://www.youtube.com/embed/${videoIdMatch[1]}`;
     }
     return url;
-  }
-
-  private checkIfVerticalVideo(url: string | null): boolean {
-    if (!url) return false;
-    return url.includes('shorts');
   }
 }

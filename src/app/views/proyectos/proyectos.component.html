@@ -15,7 +15,8 @@
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen
-                        [class.vertical]="isVerticalVideo">
+                        [class.horizontal]="proyectoActual.videoOrientation === 'horizontal'"
+                        [class.vertical]="proyectoActual.videoOrientation === 'vertical'">
                     </iframe>
                 </div>
             </ng-container>
