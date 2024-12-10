@@ -1,14 +1,15 @@
-.titulo{
+.titulo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3%;
     color: var(--colorTextoBlanco);
-    h2{
+    h2 {
         margin: 0;
     }
 }
-.proyectos{
+
+.proyectos {
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
@@ -17,22 +18,22 @@
     align-content: flex-start;
     background-color: var(--colorBack);
     color: var(--colorTextoBlanco);
-    .flechaIzq, .flechaDer{
+    .flechaIzq, .flechaDer {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
         width: 3%;
-        i{
+        i {
             font-size: 2rem;
             cursor: pointer;
         }
     }
-    .contenido{
+    .contenido {
         width: 84vw;
         height: 100%;
         display: flex;
-        .der, .izq{
+        .der, .izq {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -40,23 +41,23 @@
             height: 100%;
             width: 42vw;
             margin: 0;
-            .tags{
+            .tags {
                 display: flex;
                 flex-direction: row;
                 gap: 0.8rem;
                 margin-top: 1.2rem;
 
-                .tag{
+                .tag {
                     padding: 0.2rem;
                     background-color: var(--colorTextoRojo);
                     border-radius: 20px;
 
-                    p{
+                    p {
                         margin: 0;
                     }
                 }
             }
-            .descripcion{
+            .descripcion {
                 width: 90%
             }
             .video-container {
@@ -65,21 +66,27 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                    &.vertical {
+                        width: 50%;
+                        height: 100%;
+                    }
+                }
             }
         }
     }
 }
-.contador{
+
+.contador {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--colorTextoBlanco);
-    p{
+    p {
         margin: 0;
     }
-}
-* {
-    outline: red dashed 1px;
 }

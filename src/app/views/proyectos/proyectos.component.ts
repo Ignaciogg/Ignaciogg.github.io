@@ -1,15 +1,6 @@
 import { Component, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-interface CarouselImage {
-  src: string;
-  alt: string;
-}
-
-interface TagGroup {
-  tag: string;
-}
-
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
@@ -20,6 +11,7 @@ export class ProyectosComponent {
   paginaActual: number = 1;
   proyectoActualIndex: number = 0;
   currentVideoUrl: string | null = null;
+  isVerticalVideo: boolean = false;
 
   constructor(
     private elementRef: ElementRef,
@@ -71,7 +63,8 @@ export class ProyectosComponent {
       const id = +params['id'];
       if (id >= 0 && id < this.proyectos.length) {
         this.proyectoActualIndex = id;
-        this.currentVideoUrl = this.proyectos[id].videoUrl;
+        this.currentVideoUrl = this.transformYouTubeUrl(this.proyectos[id].videoUrl);
+        console.log('Transformed URL on init:', this.currentVideoUrl);
       }
     });
   }
@@ -79,10 +72,25 @@ export class ProyectosComponent {
   cambiarProyecto(direccion: number) {
     this.proyectoActualIndex =
       (this.proyectoActualIndex + direccion + this.proyectos.length) % this.proyectos.length;
-    const nuevoVideoUrl = this.proyectoActual.videoUrl;
+    const nuevoVideoUrl = this.transformYouTubeUrl(this.proyectoActual.videoUrl);
     if (nuevoVideoUrl !== this.currentVideoUrl) {
       this.currentVideoUrl = nuevoVideoUrl;
+      console.log('Transformed URL on change:', this.currentVideoUrl);
     }
     this.router.navigate(['/proyectos', this.proyectoActualIndex], { replaceUrl: true });
+  }
+
+  private transformYouTubeUrl(url: string | null): string | null {
+    if (!url) return null;
+    const videoIdMatch = url.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/|youtube.com\/shorts\/)([a-zA-Z0-9_-]{11})/);
+    if (videoIdMatch && videoIdMatch[1]) {
+      return `https://www.youtube.com/embed/${videoIdMatch[1]}`;
+    }
+    return url;
+  }
+
+  private checkIfVerticalVideo(url: string | null): boolean {
+    if (!url) return false;
+    return url.includes('shorts');
   }
 }

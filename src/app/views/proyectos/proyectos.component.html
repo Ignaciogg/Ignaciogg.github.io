@@ -9,12 +9,13 @@
 
     <div class="contenido">
         <div class="izq">
-            <ng-container *ngIf="proyectoActual.videoUrl; else carruselContent">
+            <ng-container *ngIf="currentVideoUrl; else carruselContent">
                 <div class="video-container">
-                    <iframe [src]="proyectoActual.videoUrl | safeUrl" title="{{ proyectoActual.titulo }} video"
+                    <iframe [src]="currentVideoUrl | safeUrl" title="{{ proyectoActual.titulo }} video"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
+                        allowfullscreen
+                        [class.vertical]="isVerticalVideo">
                     </iframe>
                 </div>
             </ng-container>
