@@ -71,4 +71,8 @@ export class HeaderComponent implements OnInit {
       document.documentElement.style.setProperty('--colorSombra', "rgba(255, 255, 255, 0.1)");
     }
   }
+
+  redirigirProyecto(id: number) {
+    this.router.navigate(['/proyectos', id]);
+  }
 }

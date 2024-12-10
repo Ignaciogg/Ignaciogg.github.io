@@ -9,7 +9,7 @@ const routes: Routes = [
 
   { path: '', component: PrincipalComponent },
   { path: 'contacto', component: ContactoComponent },
-  { path: 'proyectos', component: ProyectosComponent },
+  { path: 'proyectos/:id', component: ProyectosComponent },
   { path: 'sobremi', component: SobremiComponent },
 
 ];

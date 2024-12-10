@@ -1,4 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 interface CarouselImage {
   src: string;
@@ -21,7 +22,9 @@ export class ProyectosComponent {
   currentVideoUrl: string | null = null;
 
   constructor(
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   proyectos = [
@@ -63,13 +66,23 @@ export class ProyectosComponent {
     return this.proyectos[this.proyectoActualIndex];
   }
 
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      const id = +params['id'];
+      if (id >= 0 && id < this.proyectos.length) {
+        this.proyectoActualIndex = id;
+        this.currentVideoUrl = this.proyectos[id].videoUrl;
+      }
+    });
+  }
+
   cambiarProyecto(direccion: number) {
     this.proyectoActualIndex =
       (this.proyectoActualIndex + direccion + this.proyectos.length) % this.proyectos.length;
-
     const nuevoVideoUrl = this.proyectoActual.videoUrl;
     if (nuevoVideoUrl !== this.currentVideoUrl) {
       this.currentVideoUrl = nuevoVideoUrl;
     }
+    this.router.navigate(['/proyectos', this.proyectoActualIndex], { replaceUrl: true });
   }
 }

@@ -3,7 +3,7 @@
     <div class="bienvenida">
         
         <div class="imagen animate__animated animate__fadeInLeft">
-            <img src="../../../assets/img/fotoperfil.webp" alt="Ignacio Gil" height="450px" loading="lazy">
+            <img src="../../../assets/img/fotoperfil.webp" alt="Ignacio Gil" loading="lazy">
         </div>
         <div class="derecha animate__animated animate__fadeInRight">
             <div class="texto">
@@ -91,7 +91,7 @@
             <h2>Ready Recipes</h2>
             <p>Aplicación web con Front-end Angular y Back-end Laravel que muestra y filtra recetas de cocina extraídas de YouTube mediante Web-Scraping.</p>
             <p>Cada receta cuenta con su transcripción, sus ingredientes, su precio, su categoría seleccionada mediante Inteligencia Artificial y un análisis de sentimiento de los comentarios.</p>
-            <button class="btn boton">Ver más</button>
+            <button class="btn boton" (click)="redirigirProyecto(1)">Ver más</button>
         </div>
     </div>
     <div class="proyecto">
@@ -102,7 +102,7 @@
             <h2>Balú App</h2>
             <p>Prototipo de aplicación móvil hecha con React-native para la cafetería <a href="https://www.just-eat.es/restaurants-balu-acai-boadilla-del-monte">Balú Açaí</a>.</p>
             <p>Desarrollo siguiendo la metodología Design Thinking mediante sketch, wireframe en Balsamiq, mock-up en Figma y este prototipo.</p>
-            <button class="btn boton">Ver más</button>
+            <button class="btn boton" (click)="redirigirProyecto(2)">Ver más</button>
         </div>
     </div>
     <div class="proyecto horizontal">
@@ -113,7 +113,7 @@
             <h2>Go2TheTop</h2>
             <p>Aplicación realizada con JavaFX conectada a una Base de Datos SQL y a su vez a un dispositivo Arduino Uno encargado de leer el oxígeno en sangre y la frecuencia cardíaca de un usuario.</p>
             <p>Con este proyecto, buscamos aportar un sistema interconectado y personalizable de pulseras para equipos de deportistas que deseen medir la intensidad de sus entrenamientos.</p>
-            <button class="btn boton">Ver más</button>
+            <button class="btn boton" (click)="redirigirProyecto(3)">Ver más</button>
         </div>
     </div>
 </div>

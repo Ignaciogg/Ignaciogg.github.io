@@ -1,4 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface CarouselImage {
   src: string;
@@ -13,7 +14,8 @@ interface CarouselImage {
 export class PrincipalComponent {
 
   constructor(
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private router: Router
   ) {}
 
   readyImages: CarouselImage[] = [
@@ -97,5 +99,9 @@ export class PrincipalComponent {
     const proyectosElement = this.elementRef.nativeElement.querySelector('#proyectos');
     if (proyectosElement)
       proyectosElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  redirigirProyecto(id: number) {
+    this.router.navigate(['/proyectos', id]);
   }
 }
