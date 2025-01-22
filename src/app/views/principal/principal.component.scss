@@ -98,8 +98,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        //width: 88vw;
-        //height: 88vh;
+        width: 88vw;
+        height: 88vh;
+        padding-top: 2vh;
         padding-bottom: 2vh;
         margin-top: 2vh;
         margin-bottom: 2vw;
@@ -166,7 +167,7 @@
 @media only screen and (min-width: 1150px){
     .principal{
         .bienvenida{
-            padding-top: 5vh;
+            padding-top: 12vh;
             padding-bottom: 5vh;
             .imagen{
                 margin-right: 10%;
