@@ -60,8 +60,7 @@
         }
     }
     .descripcion{
-        border-radius: 20px;
-        width: 70vw;
+        width: 68vw;
         padding-bottom: 5vh;
         p{
             font-size: clamp(0.8em, 0.7em + 1.2vw, 1em);
@@ -72,8 +71,10 @@
 }
 .icon-arrow {
     display: block;
+    height: 6rem;
     text-align: center;
     font-size: 2rem;
+    align-content: end;
     background-color: var(--colorBack);
     color: var(--colorTextoBlanco);
     i{
@@ -83,7 +84,7 @@
 .proyectos{
     display: flex;
     flex: 1 1 100%;
-    margin-top: 5rem;
+    //margin-top: 5rem;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -99,7 +100,7 @@
         justify-content: center;
         align-items: center;
         width: 88vw;
-        height: 88vh;
+        //height: 88vh;
         padding-top: 2vh;
         padding-bottom: 2vh;
         margin-top: 2vh;

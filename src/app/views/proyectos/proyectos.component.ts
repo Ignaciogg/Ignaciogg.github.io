@@ -55,7 +55,7 @@ export class ProyectosComponent {
     },
     {
       titulo: "Go2TheTop",
-      descripcion: `Aplicación realizada con JavaFX conectada a una Base de Datos SQL y a su vez a un dispositivo Arduino Uno encargado de leer el oxígeno en sangre y la frecuencia cardíaca de un usuario. 
+      descripcion: `Aplicación realizada con JavaFX conectada a una Base de Datos SQL y a su vez a un dispositivo Arduino Uno encargado de leer el oxígeno en sangre y la frecuencia cardíaca de un usuario. </br></br>
       Con este proyecto, buscamos aportar un sistema interconectado y personalizable de pulseras para equipos de deportistas que deseen medir la intensidad de sus entrenamientos.`,
       tags: ["Java", "Arduino", "SQL"],
       images: [],

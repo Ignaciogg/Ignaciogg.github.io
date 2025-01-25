@@ -1,16 +1,13 @@
 nav{
     width: 100vw;
-    
     header{
         background-color: var(--colorBack);
         color:var(--colorTextoBlanco);
         display: flex;
-        justify-content: center;
         margin: 0;
         padding: 0;
     }
 }
-
 .container1{
     background-color: var(--colorHeader);
     display: flex;
@@ -28,7 +25,6 @@ nav{
         cursor: pointer;
     }
 }
-
 .container2{
     background-color: var(--colorHeader);
     display: flex;
@@ -52,7 +48,6 @@ nav{
         transition: 0.8s;
     }
 }
-
 .container3{
     background-color: var(--colorHeader);
     display: flex;
@@ -60,12 +55,11 @@ nav{
     align-items: center;
     min-width: fit-content;
     width: 8%;
-    box-shadow: 0 0 30px var(--colorTextoAzul);
+    //box-shadow: 0 0 30px var(--colorTextoAzul);
     border-radius: 0 0 20px 20px;
     font-size: 1.5rem;
     padding: 1% 2%;
     gap: 0.8rem;
-
     .item-menu{
         cursor: pointer;
     }
@@ -73,13 +67,11 @@ nav{
         color: var(--colorTextoAzul);
         transition: 0.8s;
     }
-
     .btn{
         color: var(--colorTextoBlanco);
         background-color: transparent;
     }
 }
-  
 .sidebar-menu{
     position: fixed;
     top: 0;
@@ -117,37 +109,31 @@ nav{
         margin-top: 10%;
     }
 }
-
 .sidebar-menu.open {
     right: 0;
-}
-  
-@media only screen and (max-width: 1150px) {
-    .container1.open {
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%;
-    }
 }
 
 @media only screen and (min-width: 1150px){
     header{
         gap: 5%;
-    }
-    .items1, .items2{
-        display: flex;
-        gap: 2rem;
-        .item-menu{
-            cursor: pointer;
+        justify-content: center;
+        .container3{
+            box-shadow: 0 0 30px var(--colorTextoAzul);
         }
-        .item-menu:hover{
-            color: var(--colorTextoRojo);
-            transition: 0.8s;
+        .items1, .items2{
+            display: flex;
+            gap: 2rem;
+            .item-menu{
+                cursor: pointer;
+            }
+            .item-menu:hover{
+                color: var(--colorTextoRojo);
+                transition: 0.8s;
+            }
         }
-    }
-
-    .hamburguesa{
-        display: none;
+        .hamburguesa{
+            display: none;
+        }
     }
 }
 
@@ -156,39 +142,46 @@ nav{
         margin: 0;
         padding: 0;
         gap: 0;
-    }
-    .container2, .container3{
-        display: none;
-    }
-    .items1, .items2{
-        display: none;
-    }
-
-    .container1{
-        justify-content: center;
-        width: 35%;
-        margin-left: 20%;
-        margin-right: 15%;
-        .logo{
-            display: flex;
+        justify-content: space-around;
+        .container2{
+            display: none;
+        }
+        .container3{
+            box-shadow: 0;
+            border-radius: 0;
+            background-color: rgba($color: #000000, $alpha: 0.0);
+            div{
+                display: none;
+            }
+        }
+        .container1{
             justify-content: center;
+            width: 35%;
+            //margin-left: 14%;
+            //margin-right: 15%;
+            gap: 0;
+            .items1, .items2{
+                display: none;
+            }
+            .logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .hamburguesa{
+            display: flex;
             align-items: center;
+            margin-right: 2%;
+            .barras{
+                color: var(--colorTextoBlanco);
+                font-size: 20px;
+            }
+            .barras:hover{
+                transition: 0.5s;
+                cursor: pointer;
+                color: var(--colorTextoRojo);
+            }
         }
     }
-
-    .hamburguesa{
-        display: flex;
-        align-items: center;
-        margin-right: 2%;
-        .barras{
-            color: var(--colorTextoBlanco);
-            font-size: 20px;
-        }
-        .barras:hover{
-            transition: 0.5s;
-            cursor: pointer;
-            color: var(--colorTextoRojo);
-        }
-    }
-
 }
