@@ -63,10 +63,6 @@ nav{
     .item-menu{
         cursor: pointer;
     }
-    .item-menu:hover{
-        color: var(--colorTextoAzul);
-        transition: 0.8s;
-    }
     .btn{
         color: var(--colorTextoBlanco);
         background-color: transparent;
@@ -119,6 +115,10 @@ nav{
         justify-content: center;
         .container3{
             box-shadow: 0 0 30px var(--colorTextoAzul);
+            .item-menu:hover{
+                color: var(--colorTextoAzul);
+                transition: 0.8s;
+            }
         }
         .items1, .items2{
             display: flex;
