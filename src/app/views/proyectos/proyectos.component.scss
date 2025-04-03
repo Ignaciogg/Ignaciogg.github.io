@@ -1,3 +1,4 @@
+/* proyectos.component.scss */
 .titulo {
     display: flex;
     justify-content: center;
@@ -8,6 +9,7 @@
         margin: 0;
     }
 }
+
 .proyectos {
     display: flex;
     flex-wrap: wrap;
@@ -17,70 +19,8 @@
     align-content: flex-start;
     background-color: var(--colorBack);
     color: var(--colorTextoBlanco);
-    .flechaIzq, .flechaDer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 3%;
-        i {
-            font-size: 2rem;
-            cursor: pointer;
-        }
-    }
-    .contenido {
-        width: 84vw;
-        height: 100%;
-        display: flex;
-        .der, .izq {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            width: 42vw;
-            margin: 0;
-            .tags {
-                display: flex;
-                flex-direction: row;
-                gap: 0.8rem;
-                margin-top: 1.2rem;
-                .tag {
-                    padding: 0.2rem;
-                    background-color: var(--colorTextoRojo);
-                    border-radius: 20px;
-                    p {
-                        margin: 0;
-                    }
-                }
-            }
-            .descripcion {
-                width: 90%;
-                font-size: clamp(0.7em, 0.6em + 1.2vw, 1.2em);
-                font-weight: normal;
-            }
-            .video-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-                iframe {
-                    &.horizontal {
-                        width: 100%;
-                        height: auto;
-                        object-fit: cover;
-                    }
-                    &.vertical {
-                        width: auto;
-                        height: 90%;
-                        object-fit: cover;
-                    }
-                }
-            }
-        }
-    }
 }
+
 .contador {
     display: flex;
     justify-content: center;
@@ -90,5 +30,185 @@
     color: var(--colorTextoBlanco);
     p {
         margin: 0;
+    }
+}
+
+/* Estilos comunes para flechas */
+.flecha, .flechaIzq, .flechaDer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+        font-size: 2rem;
+        cursor: pointer;
+    }
+}
+
+/* Estilos compartidos */
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+    .tag {
+        padding: 0.2rem 0.8rem;
+        background-color: var(--colorTextoRojo);
+        border-radius: 20px;
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    iframe {
+        &.horizontal {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        &.vertical {
+            width: auto;
+            height: 90%;
+            object-fit: cover;
+        }
+    }
+}
+
+/* Versión Desktop (original mejorada) */
+.desktop-view {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+    .flechaIzq, .flechaDer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 5%;
+    }
+    
+    .contenido {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        
+        .der, .izq {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 50%;
+            margin: 0;
+            
+            .descripcion {
+                width: 90%;
+                font-size: clamp(0.7em, 0.6em + 1.2vw, 1.2em);
+                font-weight: normal;
+                overflow-y: auto;
+                max-height: 90%;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+/* Versión Móvil */
+.mobile-view {
+    display: none;
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+    
+    .contenido-movil {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        .media-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 1rem;
+            
+            .flecha {
+                width: 12%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .media-section {
+                width: 76%;
+                height: 250px;
+            }
+        }
+        
+        .tags {
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        
+        .descripcion {
+            width: 90%;
+            font-size: clamp(0.8em, 0.7em + 0.8vw, 1em);
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            margin-left: 5%;
+        }
+    }
+}
+
+/* Media queries para hacer el diseño responsive */
+@media (max-width: 1150px) {
+    .desktop-view {
+        display: none;
+    }
+    
+    .mobile-view {
+        display: block;
+    }
+    
+    .proyectos {
+        height: auto;
+        min-height: 60vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-view .contenido-movil .media-container .media-section {
+        height: 220px;
+    }
+    
+    .titulo h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-view .contenido-movil .media-container {
+        .flecha i {
+            font-size: 1.5rem;
+        }
+        
+        .media-section {
+            height: 180px;
+        }
+    }
+    
+    .titulo h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contador p {
+        font-size: 1.2rem;
     }
 }

@@ -1,37 +1,82 @@
+<!-- proyectos.component.html -->
 <div class="titulo animate__animated animate__fadeIn">
     <h2>{{ proyectoActual.titulo }}</h2>
 </div>
 
 <div class="proyectos animate__animated animate__fadeIn">
-    <div class="flechaIzq" (click)="cambiarProyecto(-1)">
-        <i class="fas fa-chevron-left"></i>
-    </div>
-
-    <div class="contenido">
-        <div class="izq">
-            <ng-container *ngIf="currentVideoUrl; else carruselContent">
-                <div class="video-container">
-                    <iframe [src]="currentVideoUrl | safeUrl" title="{{ proyectoActual.titulo }} video"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        [class.horizontal]="proyectoActual.videoOrientation === 'horizontal'"
-                        [class.vertical]="proyectoActual.videoOrientation === 'vertical'">
-                    </iframe>
+    <!-- Versión Móvil -->
+    <div class="mobile-view">
+        <div class="contenido-movil">
+            <div class="media-container">
+                <div class="flecha flechaIzq" (click)="cambiarProyecto(-1)">
+                    <i class="fas fa-chevron-left"></i>
                 </div>
-            </ng-container>
-            <ng-template #carruselContent>
-                <carrusel [images]="proyectoActual.images" carouselId="slider{{ proyectoActualIndex }}"></carrusel>
-            </ng-template>
+
+                <div class="media-section">
+                    <ng-container *ngIf="currentVideoUrl; else carruselContent">
+                        <div class="video-container">
+                            <iframe [src]="currentVideoUrl | safeUrl" title="{{ proyectoActual.titulo }} video"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                [class.horizontal]="proyectoActual.videoOrientation === 'horizontal'"
+                                [class.vertical]="proyectoActual.videoOrientation === 'vertical'">
+                            </iframe>
+                        </div>
+                    </ng-container>
+                    <ng-template #carruselContent>
+                        <carrusel [images]="proyectoActual.images" carouselId="slider{{ proyectoActualIndex }}"></carrusel>
+                    </ng-template>
+                </div>
+
+                <div class="flecha flechaDer" (click)="cambiarProyecto(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
             <div class="tags">
                 <div class="tag" *ngFor="let tag of proyectoActual.tags">
                     <p>{{ tag }}</p>
                 </div>
             </div>
-        </div>
-        <div class="der">
+            
             <div class="descripcion" [innerHTML]="proyectoActual.descripcion"></div>
         </div>
+    </div>
+    
+    <!-- Versión Desktop (estructura original) -->
+    <div class="desktop-view">
+        <div class="flechaIzq" (click)="cambiarProyecto(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+
+        <div class="contenido">
+            <div class="izq">
+                <ng-container *ngIf="currentVideoUrl; else carruselContent">
+                    <div class="video-container">
+                        <iframe [src]="currentVideoUrl | safeUrl" title="{{ proyectoActual.titulo }} video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            [class.horizontal]="proyectoActual.videoOrientation === 'horizontal'"
+                            [class.vertical]="proyectoActual.videoOrientation === 'vertical'">
+                        </iframe>
+                    </div>
+                </ng-container>
+                <ng-template #carruselContent>
+                    <carrusel [images]="proyectoActual.images" carouselId="slider{{ proyectoActualIndex }}"></carrusel>
+                </ng-template>
+                <div class="tags">
+                    <div class="tag" *ngFor="let tag of proyectoActual.tags">
+                        <p>{{ tag }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="der">
+                <div class="descripcion" [innerHTML]="proyectoActual.descripcion"></div>
+            </div>
+        </div>
+
         <div class="flechaDer" (click)="cambiarProyecto(1)">
             <i class="fas fa-chevron-right"></i>
         </div>
